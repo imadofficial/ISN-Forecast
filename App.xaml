@@ -1,0 +1,9 @@
+﻿<Application x:Class="Weather_Channel.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Weather_Channel"
+             StartupUri="Main.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
