@@ -1,4 +1,4 @@
-# ISN-Forecast-Channel
+# ISN (Wii) Forecast Channel
 The actively maintained application that looks &amp; feels like the Wii Forecast Channel. 
 
 **Latest build:**
