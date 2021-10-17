@@ -12,7 +12,7 @@ As of right now (October 12th, 2021) ISN Forecast Channel is capable of extracti
 ## What services are you using?
 We currently don't have that many services but my goal is to have in every country 1 weather service and embed it inside the application. But here's a list of what services that i use.
 
-- Belgium: KMI (https://www.meteo.be)
+- Belgium: KMI (https://openweathermap.org/)
 - Japan: (https://global.weathernews.com)
 - New Zealand (https://www.metservice.com)
 - Rest of the world (https://www.accuweather.com)
