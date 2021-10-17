@@ -3,8 +3,8 @@ The actively maintained application that looks &amp; feels like the Wii Forecast
 
 **Latest build:**
 
-| [Windows XP/Vista (x86) - Soon!](#) | [Windows 7+ (x64)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) |
-| ------------- | ------------- |
+| [Windows XP/Vista (x86) - Soon!](#) | [Windows 7+ (x64)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) | [Linux (x64) -> Coming soon]
+| ------------- | ------------- | ------------- |
 
 ## What are the features?
 As of right now (October 12th, 2021) ISN Forecast Channel is capable of extracting weather data found in various local weather companies.
