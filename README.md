@@ -1,9 +1,9 @@
-# ISN (Wii) Forecast Channel
-The actively maintained application that looks &amp; feels like the Wii Forecast Channel. 
+# ISN Forecast Channel
+The actively maintained application & reliable weather application.
 
 **Latest build:**
 
-| [Windows XP/Vista (x86) - Soon!](#) | [Windows 7+ (x64)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) | Linux (x64) -> Coming soon
+| [Windows XP/Vista (x86) - Soon!](#) | [Windows 10 2004+ (x64)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) | Linux (x64) -> Coming soon
 | ------------- | ------------- | ------------- |
 
 ## What are the features?
