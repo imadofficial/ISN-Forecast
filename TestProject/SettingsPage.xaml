@@ -1,0 +1,35 @@
+﻿<Page x:Class="TestProject.SampleSettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <ComboBox Header="Show temperature in:" PlaceholderText="Units" Width="200" Margin="150,10,0,0">
+            <x:String>°C</x:String>
+            <x:String>°F</x:String>
+            <x:String>°R</x:String>
+            <x:String>°N</x:String>
+        </ComboBox>
+        
+        <TextBlock
+            Style="{StaticResource TitleTextBlockStyle}"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="More customizable options coming soon!" Margin="150,100,0,0"/>
+
+        <TextBlock
+            Style="{StaticResource TitleTextBlockStyle}"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Version 0.1" Margin="150,140,0,0"
+            Opacity="0.5"
+            FontSize="16"/>
+        
+        <TextBlock
+            Style="{StaticResource TitleTextBlockStyle}"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Build 32" Margin="150,160,0,0"
+            Opacity="0.5"
+            FontSize="16"/>
+    </Grid>
+</Page>
