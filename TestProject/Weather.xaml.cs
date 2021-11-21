@@ -32,7 +32,7 @@ namespace TestProject
 
         public async void Engine()
         {
-            //try
+            try
             {
                 //Get coordinates
                 var geoLocator = new Geolocator();
@@ -137,11 +137,11 @@ namespace TestProject
                     }
                 }
             }
-            //catch
-            //{
-            //  var dialog = new MessageDialog("Location services are not enabled.");
-            //    await dialog.ShowAsync();
-            //}
+            catch
+            {
+                var dialog = new MessageDialog("Location services are not enabled.");
+                await dialog.ShowAsync();
+            }
         }
 
         public static DateTime CalculateUpdated(double LastUpdated)
