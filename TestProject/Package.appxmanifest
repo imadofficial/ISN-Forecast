@@ -4,17 +4,20 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  IgnorableNamespaces="uap mp">
+  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
+  xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  IgnorableNamespaces="uap mp iot uap2 uap3">
 
   <Identity
     Name="A5F896CD-7CB6-45DF-BEC7-8673983D7971"
-    Publisher="CN=ISN"
-    Version="0.1.34.0" />
+    Publisher="CN=Imad (ISN)"
+    Version="0.2.88.0" />
 
   <mp:PhoneIdentity PhoneProductId="1e3306d1-7340-4412-a1b7-e908babd8ddb" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>ISN Forecast Channel</DisplayName>
+    <DisplayName>ISN Forecast</DisplayName>
     <PublisherDisplayName>ISN Forecast</PublisherDisplayName>
     <Logo>ASSET\StoreLogo.png</Logo>
   </Properties>
@@ -35,7 +38,7 @@
         DisplayName="ISN Forecast"
         Square150x150Logo="ASSET\Square150x150Logo.png"
         Square44x44Logo="ASSET\Square44x44Logo.png"
-        Description="TestProject"
+        Description="ISN Forecast provides an easy way to check your local weather information without a hitch. All powered by ISN &amp; CablePlug."
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="ASSET\Wide310x150Logo.png">
           <uap:ShowNameOnTiles>
@@ -50,6 +53,9 @@
 
   <Capabilities>
     <Capability Name="internetClient" />
+    <iot:Capability Name="systemManagement"/>
+    <uap3:Capability Name="backgroundMediaPlayback"/>
     <DeviceCapability Name="location"/>
   </Capabilities>
+
 </Package>

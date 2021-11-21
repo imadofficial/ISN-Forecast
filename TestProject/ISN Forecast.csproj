@@ -7,8 +7,8 @@
     <ProjectGuid>{A426E0D2-CD3F-40AB-BA40-9E06F46F4DB0}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestProject</RootNamespace>
-    <AssemblyName>TestProject</AssemblyName>
+    <RootNamespace>ISN_Forecast</RootNamespace>
+    <AssemblyName>ISN Forecast</AssemblyName>
     <DefaultLanguage>ja</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
@@ -19,13 +19,14 @@
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
-    <PackageCertificateThumbprint>E939DFFDFE312460509DDE57B4FB95976AF1DEE2</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>DCCBA8C724A77049800D3E4C9149AA56E51CB8BC</PackageCertificateThumbprint>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
     <AppxBundlePlatforms>x64</AppxBundlePlatforms>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
     <AppxBundle>Always</AppxBundle>
+    <PackageCertificateKeyFile />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -156,6 +157,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ASSET\BadgeLogo.scale-100.png" />
+    <Content Include="ASSET\BadgeLogo.scale-400.png" />
+    <Content Include="ASSET\Square44x44Logo.targetsize-256_altform-lightunplated.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="ASSET\LockScreenLogo.scale-200.png" />
     <Content Include="ASSET\SplashScreen.scale-200.png" />
@@ -212,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ISN Forecast_TemporaryKey.pfx" />
+    <None Include="Settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

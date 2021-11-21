@@ -2,9 +2,18 @@
 using System;
 using Windows.Devices.Geolocation;
 using Windows.Foundation.Metadata;
+using Windows.UI.Popups;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using Newtonsoft.Json.Linq;
+using System.Text;
+using System.Linq;
+using Windows.UI.Xaml.Media;
+using System.Drawing;
+using Windows.UI.Xaml.Data;
+using Windows.UI;
 
 namespace TestProject
 {
@@ -14,61 +23,133 @@ namespace TestProject
     /// 
     public sealed partial class SamplePage1 : Page
     {
-
-        //////////////////////////////////////////////////////////////////////////////////////////////////// Constructor
-        ////////////////////////////////////////////////////////////////////////////////////////// Public
-
-        #region 생성자 - SamplePage1()
-
-        /// <summary>
-        /// 생성자
-        /// </summary>
         public SamplePage1()
         {
+            ApplicationView.GetForCurrentView().Title = "Current weather";
             InitializeComponent();
             Engine();
         }
 
         public async void Engine()
         {
-            var APIKey = "INSERT_KEY_HERE";
-
-            //Get coordinates
-            var geoLocator = new Geolocator();
-            geoLocator.DesiredAccuracy = PositionAccuracy.High;
-            var pos = await geoLocator.GetGeopositionAsync();
-            string latitude = pos.Coordinate.Point.Position.Latitude.ToString();
-            string longitude = pos.Coordinate.Point.Position.Longitude.ToString();
-
-
-            using (var webClient = new System.Net.WebClient())
+            //try
             {
-                var json = webClient.DownloadString("https://api.weatherapi.com/v1/current.json" + "?key=" + APIKey + "&q=" + latitude + "," + longitude);
-                //Now parse with JSON.Net
-                var Forecast = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+                //Get coordinates
+                var geoLocator = new Geolocator();
+                geoLocator.DesiredAccuracy = PositionAccuracy.High;
+                var pos = await geoLocator.GetGeopositionAsync();
+                string latitude = pos.Coordinate.Point.Position.Latitude.ToString();
+                string longitude = pos.Coordinate.Point.Position.Longitude.ToString();
 
 
-                string temperature = Forecast["current"]["temp_c"].ToString();
-                string city = Forecast["location"]["name"].ToString();
-                string country = Forecast["location"]["country"].ToString();
+                using (var webClient = new System.Net.WebClient())
+                {
+                    var globaltemps = webClient.DownloadString("https://forecast.imadsnetwork.net/api/forecast/" + "?API=global&q=" + latitude + "," + longitude);
+                    var Forecast = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(globaltemps);
 
-                Temperature.Text = temperature + "°C";
-                Coordinates.Text = city + ", " + country;
-                Coordinates.Opacity = 1;
+                    //Parsing Weather data
+                    string temperature = Forecast["current"]["temp_c"].ToString();
+                    string city = Forecast["location"]["name"].ToString();
+                    string country = Forecast["location"]["country"].ToString();
+                    string condition = Forecast["current"]["condition"]["text"].ToString();
+
+                    LoadingCircle.IsActive = false;
+
+                    Temperature.Text = temperature + "°C";
+                    Coordinates.Text = city + ", " + country;
+                    Coordinates.Opacity = 1;
+                    Temperature.Opacity = 1;
+                    Condition.Text = condition;
+                    Condition.Opacity = 1;
+
+                    try
+                    {
+                        
+                        var globalAQI = webClient.DownloadString("https://api.ambeedata.com/latest/by-lat-lng?lat=" + latitude + "&lng=" + longitude);
+                        var AQI = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(globalAQI);
+
+                        string aqi = AQI["stations"][0]["AQI"].ToString();
+                        AQI_Value.Text = aqi;
+                        //Converting string to Int
+                        int AqiInt = Int32.Parse(aqi);
+
+                        LoadingCircle.IsActive = false;
+
+                        if (Enumerable.Range(1, 50).Contains(AqiInt))
+                        {
+                            AQIColor.Fill = new SolidColorBrush(Colors.Green);
+
+                            AQIColor.Opacity = 1;
+                            AQITXT.Opacity = 1;
+                            AQI_Value.Opacity = 1;
+                        }
+                        if (Enumerable.Range(51, 100).Contains(AqiInt))
+                        {
+                            AQIColor.Fill = new SolidColorBrush(Colors.Yellow);
+                            AQITXT.Foreground = new SolidColorBrush(Colors.Black);
+                            AQI_Value.Foreground = new SolidColorBrush(Colors.Black);
+
+                            AQIColor.Opacity = 1;
+                            AQITXT.Opacity = 1;
+                            AQI_Value.Opacity = 1;
+                        }
+                        if (Enumerable.Range(101, 150).Contains(AqiInt))
+                        {
+                            AQIColor.Fill = new SolidColorBrush(Colors.Orange);
+
+                            AQIColor.Opacity = 1;
+                            AQITXT.Opacity = 1;
+                            AQI_Value.Opacity = 1;
+                        }
+                        if (Enumerable.Range(151, 200).Contains(AqiInt))
+                        {
+                            AQIColor.Fill = new SolidColorBrush(Colors.Red);
+
+                            AQIColor.Opacity = 1;
+                            AQITXT.Opacity = 1;
+                            AQI_Value.Opacity = 1;
+                        }
+
+                        if (Enumerable.Range(201, 300).Contains(AqiInt))
+                        {
+                            AQIColor.Fill = new SolidColorBrush(Colors.MediumPurple);
+
+                            AQIColor.Opacity = 1;
+                            AQITXT.Opacity = 1;
+                            AQI_Value.Opacity = 1;
+                        }
+                        if (Enumerable.Range(301, 999).Contains(AqiInt))
+                        {
+                            AQIColor.Opacity = 1;
+                            AQITXT.Opacity = 1;
+                            AQI_Value.Opacity = 1;
+                        }
+
+                        if (country == "China")
+                        {
+                            var China = webClient.DownloadString("https://forecast.imadsnetwork.net/api/forecast/" + "?API=global&q=" + latitude + "," + longitude);
+                        }
+
+                    }
+                    catch
+                    {
+
+                    }
+                }
             }
+            //catch
+            //{
+            //  var dialog = new MessageDialog("Location services are not enabled.");
+            //    await dialog.ShowAsync();
+            //}
         }
 
-        #endregion
-
-        //////////////////////////////////////////////////////////////////////////////////////////////////// Method
-        ////////////////////////////////////////////////////////////////////////////////////////// Public
-
-        #region 연결 애니메이션 준비하기 - PrepareConnectedAnimation(configuration)
-
-        /// <summary>
-        /// 연결 애니메이션 준비하기
-        /// </summary>
-        /// <param name="configuration">연결 애니메이션 구성</param>
+        public static DateTime CalculateUpdated(double LastUpdated)
+        {
+            System.DateTime dt = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+            dt = dt.AddSeconds(LastUpdated).ToLocalTime();
+            return dt;
+        }
         public void PrepareConnectedAnimation(ConnectedAnimationConfiguration configuration)
         {
             ConnectedAnimation animation = ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("ForwardConnectedAnimation", this.sourceGrid);
@@ -78,17 +159,6 @@ namespace TestProject
                 animation.Configuration = configuration;
             }
         }
-
-        #endregion
-
-        ////////////////////////////////////////////////////////////////////////////////////////// Protected
-
-        #region 탐색되는 경우 처리하기 - OnNavigatedTo(e)
-
-        /// <summary>
-        /// 탐색되는 경우 처리하기
-        /// </summary>
-        /// <param name="e">이벤트 인자</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
@@ -100,132 +170,5 @@ namespace TestProject
                 animation.TryStart(this.sourceGrid);
             }
         }
-
-        #endregion
     }
-
-    public class Location
-    {
-
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
-        [JsonProperty("region")]
-        public string Region { get; set; }
-
-        [JsonProperty("country")]
-        public string Country { get; set; }
-
-        [JsonProperty("lat")]
-        public double Lat { get; set; }
-
-        [JsonProperty("lon")]
-        public double Lon { get; set; }
-
-        [JsonProperty("tz_id")]
-        public string TzId { get; set; }
-
-        [JsonProperty("localtime_epoch")]
-        public int LocaltimeEpoch { get; set; }
-
-        [JsonProperty("localtime")]
-        public string Localtime { get; set; }
-    }
-
-    public class Condition
-    {
-
-        [JsonProperty("text")]
-        public string Text { get; set; }
-
-        [JsonProperty("icon")]
-        public string Icon { get; set; }
-
-        [JsonProperty("code")]
-        public int Code { get; set; }
-    }
-
-    public class Current
-    {
-
-        [JsonProperty("last_updated_epoch")]
-        public int LastUpdatedEpoch { get; set; }
-
-        [JsonProperty("last_updated")]
-        public string LastUpdated { get; set; }
-
-        [JsonProperty("temp_c")]
-        public double TempC { get; set; }
-
-        [JsonProperty("temp_f")]
-        public double TempF { get; set; }
-
-        [JsonProperty("is_day")]
-        public int IsDay { get; set; }
-
-        [JsonProperty("condition")]
-        public Condition Condition { get; set; }
-
-        [JsonProperty("wind_mph")]
-        public double WindMph { get; set; }
-
-        [JsonProperty("wind_kph")]
-        public double WindKph { get; set; }
-
-        [JsonProperty("wind_degree")]
-        public int WindDegree { get; set; }
-
-        [JsonProperty("wind_dir")]
-        public string WindDir { get; set; }
-
-        [JsonProperty("pressure_mb")]
-        public double PressureMb { get; set; }
-
-        [JsonProperty("pressure_in")]
-        public double PressureIn { get; set; }
-
-        [JsonProperty("precip_mm")]
-        public double PrecipMm { get; set; }
-
-        [JsonProperty("precip_in")]
-        public double PrecipIn { get; set; }
-
-        [JsonProperty("humidity")]
-        public int Humidity { get; set; }
-
-        [JsonProperty("cloud")]
-        public int Cloud { get; set; }
-
-        [JsonProperty("feelslike_c")]
-        public double FeelslikeC { get; set; }
-
-        [JsonProperty("feelslike_f")]
-        public double FeelslikeF { get; set; }
-
-        [JsonProperty("vis_km")]
-        public double VisKm { get; set; }
-
-        [JsonProperty("vis_miles")]
-        public double VisMiles { get; set; }
-
-        [JsonProperty("uv")]
-        public double Uv { get; set; }
-
-        [JsonProperty("gust_mph")]
-        public double GustMph { get; set; }
-
-        [JsonProperty("gust_kph")]
-        public double GustKph { get; set; }
-    }
-
-    public class Example
-    {
-
-        [JsonProperty("location")]
-        public Location Location { get; set; }
-
-        [JsonProperty("current")]
-        public Current Current { get; set; }
-    }
-
 }

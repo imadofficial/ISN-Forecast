@@ -3,24 +3,30 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+        <ComboBox x:Name="navSetup" Header="Panel Layout" Width="200" Margin="150,80,0,0" SelectionChanged="NavPanelChange"/>
+
         <ComboBox Header="Show temperature in:" PlaceholderText="Units" Width="200" Margin="150,10,0,0">
             <x:String>°C</x:String>
             <x:String>°F</x:String>
-            <x:String>°R</x:String>
-            <x:String>°N</x:String>
         </ComboBox>
         
         <TextBlock
             Style="{StaticResource TitleTextBlockStyle}"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Text="More customizable options coming soon!" Margin="150,100,0,0"/>
+            Text="" Margin="210,165,0,0"
+            Opacity="1"
+            FontSize="16"/>
+
+        <ProgressRing x:Name="LoadingCircle" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,160,0,0" IsActive="False" Height="30" Width="30"/>
+
+        <Button Name="SaveButton"  Content="Save" Click="SaveSettings" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,160,0,0"/>
 
         <TextBlock
             Style="{StaticResource TitleTextBlockStyle}"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Text="Version 0.1" Margin="150,140,0,0"
+            Text="Version 0.2" Margin="150,210,0,0"
             Opacity="0.5"
             FontSize="16"/>
         
@@ -28,7 +34,15 @@
             Style="{StaticResource TitleTextBlockStyle}"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Text="Build 32" Margin="150,160,0,0"
+            Text="Build 83" Margin="150,230,0,0"
+            Opacity="0.5"
+            FontSize="16"/>
+
+        <TextBlock
+            Style="{StaticResource TitleTextBlockStyle}"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Beta 3" Margin="150,250,0,0"
             Opacity="0.5"
             FontSize="16"/>
     </Grid>

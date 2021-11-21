@@ -4,6 +4,9 @@ using Windows.Graphics.Display;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace TestProject
 {
@@ -17,8 +20,6 @@ namespace TestProject
         public MainPage()
         {
             InitializeComponent();
-
-            #region 윈도우 크기를 설정한다.
 
             double width = 800d;
             double height = 600d;
@@ -35,12 +36,36 @@ namespace TestProject
 
             ApplicationView.GetForCurrentView().TryResizeView(windowSize);
 
-            #endregion
-            #region 윈도우 제목을 설정한다.
-
             ApplicationView.GetForCurrentView().Title = "Weather";
 
-            #endregion
+            Initialization();
+        }
+
+        public void Initialization()
+        {
+            var Settings = File.ReadAllText(@"Settings.json");
+            dynamic config = JToken.Parse(Settings);
+
+            if (config.NavPanelStyle == 0)
+            {
+                this.navigationView.PaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Top;
+                this.navigationView.IsPaneOpen = false;
+            }
+            if (config.NavPanelStyle == 1)
+            {
+                this.navigationView.PaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Left;
+                this.navigationView.IsPaneOpen = true;
+            }
+            if (config.NavPanelStyle == 2)
+            {
+                this.navigationView.PaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Top;
+                this.navigationView.IsPaneOpen = false;
+            }
+            if (config.NavPanelStyle == 3)
+            {
+                this.navigationView.PaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.LeftCompact;
+                this.navigationView.IsPaneOpen = false;
+            }
         }
 
         #endregion
@@ -68,7 +93,7 @@ namespace TestProject
 
         #endregion
         #region 왼쪽 창 위치 라디오 버튼 체크시 처리하기 - leftPanePositionRadioButton_Checked(sender, e)
-        private void leftPanePositionRadioButton_Checked(object sender, RoutedEventArgs e)
+        public void leftPanePositionRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             this.navigationView.PaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Left;
             this.navigationView.IsPaneOpen = true;
@@ -76,7 +101,7 @@ namespace TestProject
 
         #endregion
         #region 위쪽 창 위치 라디오 버튼 체크시 처리하기 - topPanePositionRadioButton_Checked(sender, e)
-        private void topPanePositionRadioButton_Checked(object sender, RoutedEventArgs e)
+        public void topPanePositionRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             this.navigationView.PaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Top;
             this.navigationView.IsPaneOpen = false;
@@ -85,7 +110,7 @@ namespace TestProject
         #endregion
         #region 왼쪽 컴팩트 창 위치 라디오 버튼 체크시 처리하기 - leftCompactPanePositionRadioButton_Checked(sender, e)
 
-        private void leftCompactPanePositionRadioButton_Checked(object sender, RoutedEventArgs e)
+        public void leftCompactPanePositionRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             this.navigationView.PaneDisplayMode = Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.LeftCompact;
             this.navigationView.IsPaneOpen = false;

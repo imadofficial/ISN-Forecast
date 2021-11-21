@@ -23,7 +23,7 @@
                         Tag="SamplePage1" />
                     <muxc:NavigationViewItem Content="Earthquake alerts"
                         Icon="Contact"
-                        ToolTipService.ToolTip="계정"
+                        ToolTipService.ToolTip="Get current earthquakes"
                         SelectsOnInvoked="False">
                         <muxc:NavigationViewItem.MenuItems>
                             <muxc:NavigationViewItem Content="Current earthquakes"
@@ -54,23 +54,6 @@
                 </muxc:NavigationView.MenuItems>
                 <Frame x:Name="frame" />
             </muxc:NavigationView>
-            <StackPanel Grid.Column="2"
-                Spacing="10">
-                <TextBlock Text="Panel Layout :" />
-                <RadioButton
-                    GroupName="hierachicalGroup"
-                    Content="Detailed"
-                    Checked="leftPanePositionRadioButton_Checked"
-                    IsChecked="True" />
-                <RadioButton
-                    GroupName="hierachicalGroup"
-                    Content="Top"
-                    Checked="topPanePositionRadioButton_Checked"/>
-                <RadioButton
-                    GroupName="hierachicalGroup"
-                    Content="Icons only"
-                    Checked="leftCompactPanePositionRadioButton_Checked" />
-            </StackPanel>
         </Grid>
     </Grid>
 </Page>
