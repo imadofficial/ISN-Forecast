@@ -3,8 +3,8 @@ The actively maintained application & reliable weather application.
 
 **Latest build:**
 
-| Windows XP/Vista (x86) - Soon! | [Windows 10 2004+ (x64)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) | Linux (x64) -> Coming soon
-| ------------- | ------------- | ------------- |
+| Windows XP/Vista (x86) - Soon! | [Windows 10 2004+ (x64)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) | Linux (x64) -> Coming soon | Windows 11 - Soon!
+| ------------- | ------------- | ------------- | ------------- |
 
 ## What are the features?
 As of right now (October 12th, 2021) ISN Forecast Channel is capable of extracting weather data found in various local weather companies.
