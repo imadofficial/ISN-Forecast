@@ -13,6 +13,7 @@ As of right now (October 12th, 2021) ISN Forecast Channel is capable of extracti
 We currently don't have that many services but my goal is to have in every country 1 weather service and embed it inside the application. But here's a list of what services that i use.
 
 - Rest of the world (https://www.weatherapi.com/ & https://www.getambee.com/)
+- China (https://www.qweather.com/)
 
 By using ISN Weather Channel, you agree to these companies' terms and conditions (depending on where you're located).
 
