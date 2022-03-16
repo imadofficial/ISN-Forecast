@@ -1,4 +1,5 @@
 # ISN Forecast Channel
+[![CodeFactor](https://www.codefactor.io/repository/github/imadofficial/isn-forecast/badge)](https://www.codefactor.io/repository/github/imadofficial/isn-forecast)
 The actively maintained application & reliable weather application.
 
 **Latest build:**
