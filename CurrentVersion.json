@@ -1,6 +1,8 @@
 {
   "Version": "1.0",
   "Build": 1,
+  "SubBuild": 0,
+  
   "UpdateName": "Initial Release",
   "Additional Req": "None",
   "Description": "This is an initial release. This shouldn't appear as an update."
