@@ -1,0 +1,23 @@
+﻿<Page x:Class="Setup.EULA"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Setup"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EULA">
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="90,0,90,100" Opacity="1">
+            <TextBlock Name="EULA_TEXT" FontSize="16" TextWrapping="Wrap" Text="" Foreground="White"/>
+        </StackPanel>
+        </ScrollViewer>
+                <TextBlock Name="LoadingScreen" Text="Setup is loading files..." FontFamily="Segoe UI" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" FontSize="18" Margin="0,0,0,100"/>
+        <Label Name="NextBtn" MouseLeftButtonDown="Next" Content="Next →" FontSize="21" HorizontalAlignment="Right" Margin="0,0,90,20" VerticalAlignment="Bottom" Foreground="White" Opacity="0" IsEnabled="False"/>
+        
+        <RadioButton Name="EulaAccept" FontSize="18" Content="I accept the EULA." VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="90,0,0,45" Foreground="White" Opacity="0"/>
+        <RadioButton Name="EulaDeny" FontSize="18" IsChecked="True" Content="I don't accept the EULA." VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="90,0,0,20" Foreground="White" Opacity="0"/>
+    </Grid>
+</Page>
