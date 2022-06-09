@@ -1,4 +1,4 @@
-using ISN_Forecast.Win7.FirstSetup;
+﻿using ISN_Forecast.Win7.FirstSetup;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -131,7 +131,7 @@ namespace ISN_Forecast.Win7
             Statusbar.Instance.Status.Text = "Current Weather";
             WebClient webClient = new WebClient();
             webClient.Encoding = Encoding.UTF8;
-            webClient.DownloadStringAsync(new Uri("https://api.weatherapi.com/v1/forecast.json?key=" + Configs.Weatherkey + "&q=" + GlobalStrings.City + ", "+ GlobalStrings.Country + "&days=10&aqi=yes&alerts=yes"));
+            webClient.DownloadStringAsync(new Uri("https://api.weatherapi.com/v1/forecast.json?key=" + Configs.Weatherkey + "&q=" + GlobalStrings.City + ", " + GlobalStrings.Country + "&days=10&aqi=yes&alerts=yes"));
             webClient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(WeatherData);
             webClient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(FutureForecasting);
         }
@@ -146,13 +146,15 @@ namespace ISN_Forecast.Win7
                 City.Text = GlobalStrings.City;
                 Temperature.Text = WeatherData["current"][Configs.Unit];
 
-                if(Configs.Unit == "temp_c")
+                if (Configs.Unit == "temp_c")
                 {
-                    Type.Text = "°C";
+                    Configs.UnitChar = "°C";
+                    Type.Text = Configs.UnitChar;
                 }
                 if (Configs.Unit == "temp_f")
                 {
-                    Type.Text = "°F";
+                    Configs.UnitChar = "°F";
+                    Type.Text = Configs.UnitChar;
                 }
                 ConditionText.Text = WeatherData["current"]["condition"]["text"];
 
@@ -200,7 +202,7 @@ namespace ISN_Forecast.Win7
                     Source.Text = WeatherData["alerts"]["alert"][0]["headline"];
                     Headlines.Text = WeatherData["alerts"]["alert"][0]["event"];
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Warnings.Opacity = 0;
                     Warnings.Margin = new Thickness(0, -150, 0, 0);
@@ -208,7 +210,7 @@ namespace ISN_Forecast.Win7
                     BottomInfo.Margin = new Thickness(50, 220, 50, 0);
                 }
                 #endregion
-                
+
 
                 #region UV-Rating + AQI Value
                 try
@@ -320,30 +322,56 @@ namespace ISN_Forecast.Win7
             int CurrentHour = DateTime.Now.Hour;
             String TextHour = DateTime.Now.ToString("HH");
 
-            Temp1.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(0)][Configs.Unit] + "°C";
-            Temp2.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(1)][Configs.Unit] + "°C";
-            Temp3.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(2)][Configs.Unit] + "°C";
-            Temp4.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(3)][Configs.Unit] + "°C";
-            Temp5.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(4)][Configs.Unit] + "°C";
-            Temp6.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(5)][Configs.Unit] + "°C";
-            Temp7.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(6)][Configs.Unit] + "°C";
-            Temp8.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(7)][Configs.Unit] + "°C";
-            Temp9.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(8)][Configs.Unit] + "°C";
-            Temp10.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(9)][Configs.Unit] + "°C";
-            Temp11.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(10)][Configs.Unit] + "°C";
-            Temp12.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(11)][Configs.Unit] + "°C";
-            Temp13.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(12)][Configs.Unit] + "°C";
-            Temp14.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(13)][Configs.Unit] + "°C";
-            Temp15.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(14)][Configs.Unit] + "°C";
-            Temp16.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(15)][Configs.Unit] + "°C";
-            Temp17.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(16)][Configs.Unit] + "°C";
-            Temp18.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(17)][Configs.Unit] + "°C";
-            Temp19.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(18)][Configs.Unit] + "°C";
-            Temp20.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(19)][Configs.Unit] + "°C";
-            Temp21.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(20)][Configs.Unit] + "°C";
-            Temp22.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(21)][Configs.Unit] + "°C";
-            Temp23.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(22)][Configs.Unit] + "°C";
-            Temp24.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(23)][Configs.Unit] + "°C";
+            string One = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(0)][Configs.Unit] + "°C";
+            string Two = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(1)][Configs.Unit] + "°C";
+            string Three = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(2)][Configs.Unit] + "°C";
+            string Four = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(3)][Configs.Unit] + "°C";
+            string Five = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(4)][Configs.Unit] + "°C";
+            string Six = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(5)][Configs.Unit] + "°C";
+            string Seven = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(6)][Configs.Unit] + "°C";
+            string Eight = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(7)][Configs.Unit] + "°C";
+            string Nine = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(8)][Configs.Unit] + "°C";
+            string Ten = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(9)][Configs.Unit] + "°C";
+            string Eleven = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(10)][Configs.Unit] + "°C";
+            string Twelve = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(11)][Configs.Unit] + "°C";
+            string One3 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(12)][Configs.Unit] + "°C";
+            string One4 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(13)][Configs.Unit] + "°C";
+            string One5 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(14)][Configs.Unit] + "°C";
+            string One6 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(15)][Configs.Unit] + "°C";
+            string One7 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(16)][Configs.Unit] + "°C";
+            string One8 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(17)][Configs.Unit] + "°C";
+            string One9 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(18)][Configs.Unit] + "°C";
+            string Two0 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(19)][Configs.Unit] + "°C";
+            string Two1 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(20)][Configs.Unit] + "°C";
+            string Two2 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(21)][Configs.Unit] + "°C";
+            string Two3 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(22)][Configs.Unit] + "°C";
+            string Two4 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(23)][Configs.Unit] + "°C";
+            int index = One.IndexOf(".");
+            if (index >= 0)
+                Temp1.Text = One.Substring(0, index) + Configs.UnitChar;
+                Temp2.Text = Two.Substring(0, index) + Configs.UnitChar;
+                Temp3.Text = Three.Substring(0, index) + Configs.UnitChar;
+                Temp4.Text = Four.Substring(0, index) + Configs.UnitChar;
+                Temp5.Text = Five.Substring(0, index) + Configs.UnitChar;
+                Temp6.Text = Six.Substring(0, index) + Configs.UnitChar;
+                Temp7.Text = Seven.Substring(0, index) + Configs.UnitChar;
+                Temp8.Text = Eight.Substring(0, index) + Configs.UnitChar;
+                Temp9.Text = Nine.Substring(0, index) + Configs.UnitChar;
+                Temp10.Text = Ten.Substring(0, index) + Configs.UnitChar;
+                Temp11.Text = Eleven.Substring(0, index) + Configs.UnitChar;
+                Temp12.Text = Twelve.Substring(0, index) + Configs.UnitChar;
+                Temp13.Text = One3.Substring(0, index) + Configs.UnitChar;
+                Temp14.Text = One4.Substring(0, index) + Configs.UnitChar;
+                Temp15.Text = One5.Substring(0, index) + Configs.UnitChar;
+                Temp16.Text = One6.Substring(0, index) + Configs.UnitChar;
+                Temp17.Text = One7.Substring(0, index) + Configs.UnitChar;
+                Temp18.Text = One8.Substring(0, index) + Configs.UnitChar;
+                Temp19.Text = One9.Substring(0, index) + Configs.UnitChar;
+                Temp20.Text = Two0.Substring(0, index) + Configs.UnitChar;
+                Temp21.Text = Two1.Substring(0, index) + Configs.UnitChar;
+                Temp22.Text = Two2.Substring(0, index) + Configs.UnitChar;
+                Temp23.Text = Two3.Substring(0, index) + Configs.UnitChar;
+                Temp24.Text = Two4.Substring(0, index) + Configs.UnitChar;
 
             Hour1.Text = "Now";
             Hour2.Text = ReturnTime(1) + ":00";
@@ -371,4 +399,4 @@ namespace ISN_Forecast.Win7
             Hour24.Text = ReturnTime(24) + ":00";
         }
     }
-}
+}  
