@@ -1,0 +1,18 @@
+﻿<Page x:Class="ISN_Forecast.Win7.FirstSetup.SetupCompleted"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISN_Forecast.Win7.FirstSetup"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SetupCompleted">
+
+    <Grid>
+        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Title" FontSize="24" Text="Setup completed." Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Description" FontSize="18" Text="You've now successfully set up ISN Forecast. No errors were reported and it is now ready to be used by you (the end-user).&#x0a;&#x0a;Thank you for choosing ISN Forecast as your primary weather service!&#x0a;If you have any issues, bugs or exploits that you want to report, feel free to do so by tagging me on twitter or reporting the issue on github." TextWrapping="Wrap" Width="Auto" Margin="40,0,40,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Button x:Name="Reboot" Foreground="White" Content="Restart" FontSize="23" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" Width="200" Height="40" Click="Reboot_Click"/>
+        <Button x:Name="Close" Foreground="White" Content="Close app" FontSize="23" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Right" Margin="0,0,230,20" VerticalAlignment="Bottom" Width="200" Height="40" Click="Close_Click"/>
+    </Grid>
+</Page>

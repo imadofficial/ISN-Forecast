@@ -1,0 +1,35 @@
+﻿<Page x:Class="ISN_Forecast.Win7.SetupPages.Language"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISN_Forecast.Win7.SetupPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Language"
+      xmlns:ui="http://schemas.modernwpf.com/2019">
+
+    <Grid>
+        
+        
+        <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" >
+            <StackPanel x:Name="Forks">
+                <TextBlock Foreground="White" x:Name="Recommended" Text="Recommended" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" />
+                <Button Foreground="White" Content="Button non functional" FontSize="23" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="300" Height="40"/>
+                
+                <TextBlock Foreground="White" x:Name="Other" Text="Other available languages" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" />
+                <Button Click="en_US"  Foreground="White" Content="English (USA)" FontSize="23" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="300" Height="40"/>
+                <Button Click="nl_BE" Foreground="White" Content="Nederlands (België)" FontSize="23" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="300" Height="40"/>
+                <Button Click="jp" Foreground="White" Content="日本語" FontSize="23" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="300" Height="40"/>
+                <Button Click="cn" Foreground="White" Content="中文(中国)" FontSize="23" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="300" Height="40"/>
+                
+                <Button Click="ru" Foreground="White" Content="Pусский" FontSize="23" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="300" Height="40"/>
+                
+            </StackPanel>
+        </ScrollViewer>
+
+        <Button Click="Next_Click" IsEnabled="True" x:Name="Next" Opacity="0.2" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="0,20,20,0">
+            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="Next.png"></Image>
+        </Button>
+    </Grid>
+</Page>

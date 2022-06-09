@@ -1,0 +1,69 @@
+﻿<Page x:Class="ISN_Forecast.Win7.FirstSetup.SmallerSettings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISN_Forecast.Win7.FirstSetup"
+      xmlns:ui="http://schemas.modernwpf.com/2019"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="SmallerSettings">
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" >
+            <StackPanel Margin="0,0,0,0" x:Name="Forks">
+                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Title" FontSize="24" Text="The last step" Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <StackPanel Margin="20,10,20,0" Opacity="1" Width="600" Height="Auto">
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Description" FontSize="21" Text="To take full advantage of ISN Forecast, we require you to confirm if the information is correct. If not please correct them."/>
+                </StackPanel>
+                
+                <StackPanel Margin="0,10,0,0">
+                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="TimeFormat" FontSize="26" Text="Time Format" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <DockPanel HorizontalAlignment="Center">
+                        <RadioButton x:Name="Two4Hour"  IsChecked="True" Margin="40,0,0,0" Content="24 Hour" Foreground="White"/>
+                        <RadioButton x:Name="One2Hour" Content="12 Hour" Foreground="White"/>
+                    </DockPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0,10,0,0">
+                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Date" FontSize="26" Text="Date Format" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <DockPanel HorizontalAlignment="Center">
+                        <ComboBox x:Name="DateFormat">
+                            <ComboBoxItem>MM/DD/YYYY</ComboBoxItem>
+                            <ComboBoxItem IsSelected="True">DD/MM/YYYY</ComboBoxItem>
+                            <ComboBoxItem>YYYY/MM/DD</ComboBoxItem>
+                            <ComboBoxItem>YYYY/DD/MM</ComboBoxItem>
+                        </ComboBox>
+                    </DockPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0,10,0,0">
+                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Country" FontSize="26" Text="Country of residence" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <DockPanel HorizontalAlignment="Center">
+                        <ComboBox x:Name="CountrySelection" />
+                    </DockPanel>
+                </StackPanel>
+
+                <CheckBox IsChecked="True" x:Name="EmergencyCheckbox" HorizontalAlignment="Center" Margin="0,10,0,0" FontSize="18" Foreground="White" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Content="Opt in to use emergency services." />
+                <CheckBox x:Name="AutoUpdates" HorizontalAlignment="Center" Margin="0,5,0,0" FontSize="18" Foreground="White" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Content="Allow Forecast to auto-update in the background. (Not recommended)"/>
+
+                <StackPanel Margin="0,10,0,0">
+                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Unit" FontSize="26" Text="Unit" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <DockPanel HorizontalAlignment="Center">
+                        <ComboBox x:Name="UnitBox">
+                            <ComboBoxItem IsSelected="True">Celsius</ComboBoxItem>
+                            <ComboBoxItem>Fahrenheit</ComboBoxItem>
+                        </ComboBox>
+                    </DockPanel>
+                </StackPanel>
+                
+            </StackPanel>
+        </ScrollViewer>
+
+        <TextBlock TextAlignment="Center" Opacity="0" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,90,0" x:Name="NextText" FontSize="21" Text="Saving..."/>
+        <Button IsEnabled="True" x:Name="Next" Click="Next_Click" Opacity="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="0,20,20,0">
+            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="Next.png"></Image>
+        </Button>
+        
+    </Grid>
+</Page>

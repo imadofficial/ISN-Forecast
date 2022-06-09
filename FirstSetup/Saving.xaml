@@ -1,0 +1,15 @@
+﻿<Page x:Class="ISN_Forecast.Win7.FirstSetup.Saving"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISN_Forecast.Win7.FirstSetup" xmlns:ui="http://schemas.modernwpf.com/2019"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Saving">
+
+    <Grid>
+        <ui:ProgressRing Opacity="1" x:Name="ProcessRing" Height="80" Width="80" IsEnabled="True" IsActive="True"/>
+        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Status" FontSize="24" Text="All done! Now we're saving your settings!" Margin="0,150,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Page>
