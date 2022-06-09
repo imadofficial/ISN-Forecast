@@ -114,7 +114,7 @@ namespace ISN_Forecast.Win7
             GlobalStrings.IP = e.Result;
 
             WebClient webClient = new WebClient();
-            webClient.DownloadStringAsync(new Uri("https://ipinfo.io/" + GlobalStrings.IP + "?token=" + Configs.IPInfoKey));
+            webClient.DownloadStringAsync(new Uri("https://ipinfo.io/" + GlobalStrings.IP + "/json"));
             webClient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(ProcessLocation);
         }
 
