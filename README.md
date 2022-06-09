@@ -5,7 +5,7 @@ The actively maintained application & reliable weather application.
 
 **Latest build:**
 
-| Windows XP/Vista (x86) - Soon! | [Windows 10 1903+ (x64)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) | Linux (x64) - Soon! | Windows 11 - Soon!
+| [Windows XP/Vista (x86)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) | [Windows 10 1903+ (x64)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) | Linux (x64) - Soon! | Windows 11 - Soon!
 | ------------- | ------------- | ------------- | ------------- |
 
 ## What are the features?
