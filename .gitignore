@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+
+**/obj/
+**/bin/
+packages/
+ISN Forecast.Win7/Metadata.json
