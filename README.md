@@ -8,7 +8,7 @@ The actively maintained application & reliable weather application.
 | ------------- | ------------- | ------------- | ------------- |
 
 ## What are the features?
-As of right now (9 June, 2022) ISN Forecast Channel is capable of a 24 hour forecast, showing celsius and fahrenheit, UV-Index and displaying AQI (AQI is in works still.)
+As of right now (9 June, 2022) ISN Forecast Channel is capable of a 24 hour forecast (having bugs), showing celsius and fahrenheit, UV-Index and displaying AQI (AQI is in works still.)
 
 ## What services are you using?
 We currently don't have that many services but my goal is to have in every country 1 weather service and embed it inside the application. But here's a list of what services that i use.
