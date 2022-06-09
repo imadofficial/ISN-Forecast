@@ -1,0 +1,56 @@
+{
+  "Metadata": {
+    "LangCode": "cn",
+    "LangName": "中文",
+    "LangBuild": "8"
+  },
+
+  "PlsWait": "请等待...",
+  "Setup": {
+    "Welcome": "欢迎你!",
+
+    "Language Select": "选择你喜欢的语言。",
+    "ChangeLanguageLater": "如果有必要，以后可以改变语言设置。",
+    "Recommended": "推荐的语言",
+    "OtherLang": "其他语言可供选择。",
+
+    "UpdateTitle": "检查更新...",
+    "TimeToUpdate": "检查...",
+    "ExtraUpdateInfo": "更新的频率可以在设置中自由改变。",
+
+    "AppearanceTitle": "是时候选择你最喜欢的造型了!",
+    "AppearanceExtra": "你可以在这里修改你的外观。但有几个选项是不可用的。",
+    "ChooseLook": "选择你的外观。",
+    "ChooseLookWording": "选择一个外观，看看按钮、上下文菜单和背景是如何调整的，这取决于你选择哪一个。",
+    "GradientOnly": "仅限梯度",
+    "Photos": "只有照片（最快的）",
+    "BlackAndWhite": "黑与白",
+    "Gradient+3D": "梯度+3D动画",
+
+    "Saving": "拯救...",
+    "IntialSaving": "全部完成! 现在我们要保存你的设置!",
+    "WritingToFile": "写入一个保存文件...",
+
+    "Finished": "Welcome to ISN Forecast!",
+    "ThankYou": "",
+
+    "LastStepTitle": "最后一步",
+    "LastStepDesc": "为了充分利用 ISN Forecast，我们要求你确认这些信息是否正确。如果不正确，请纠正它们。",
+    "TimeFormat": "时间格式",
+    "12Hour": "12小时",
+    "24Hour": "24小时",
+    "DateFormat": "日期格式",
+    "Country": "居住国",
+    "UseEmergencyServices": "选择使用紧急服务。",
+    "AllowBackgroundUpdate": "允许预报器在后台自动更新",
+    "NotRecommended": "(不推荐)",
+    "tempunit": "温度单位"
+  },
+  "Countries": {
+    "BE": "比利时", "比利时": "BE", 
+    "UK": "英国", "英国": "UK",
+    "NL": "荷兰", "荷兰": "NL",
+    "FR": "法国", "法国": "FR",
+    "ES": "西班牙", "西班牙": "ES"
+  }
+}

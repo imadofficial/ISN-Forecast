@@ -1,0 +1,56 @@
+{
+  "Metadata": {
+    "LangCode": "nl_BE",
+    "LangName": "Nederlands (Belgi�)",
+    "LangBuild": "3"
+  },
+
+  "PlsWait": "Even geduld...",
+  "Setup": {
+    "Welcome": "Welkom!",
+
+    "Language Select": "Selecteer je taal.",
+    "ChangeLanguageLater": "Je kan je taal instellingen later aanpassen in instellingen.",
+    "Recommended": "Aanbevolen taal",
+    "OtherLang": "Andere beschikbare talen",
+
+    "UpdateTitle": "Controleren op updates...",
+    "TimeToUpdate": "Checken...",
+    "ExtraUpdateInfo": "Voel je vrij om de frequentie van de updates aan te passen in de instellingen indien nodig.",
+
+    "AppearanceTitle": "Tijd om ISN Forecast te personalizeren!",
+    "AppearanceExtra": "Je kunt je uiterlijk hier aanpassen. Maar er zijn een paar opties niet beschikbaar.",
+    "ChooseLook": "Kies jouw uiterlijk.",
+    "ChooseLookWording": "Kies een uiterlijk en zie hoe de knoppen, contextmenu's en achtergrond zich aanpassen afhankelijk van welk uiterlijk u kiest.",
+    "GradientOnly": "Enkel verloop",
+    "Photos": "Fotos als achtergrond",
+    "BlackAndWhite": "Zwart en Wit",
+    "Gradient+3D": "Verloop + 3D Animaties",
+
+    "Saving": "Opslaan...",
+    "IntialSaving": "Ziezo! Tijd om jouw instelling op te slaan!",
+    "WritingToFile": "Naar bestand schrijven...",
+
+    "Finished": "Welkom bij ISN Forecast!",
+    "ThankYou": "",
+
+    "LastStepTitle": "Het laatste stap",
+    "LastStepDesc": "Om ISN Forecast tot zijn volledige potentie te kunnen gebruiken, willen we je vragen om deze informatie te controleren. Indien er iets fout is, corrigeer het.",
+    "TimeFormat": "Tijd formaat",
+    "12Hour": "12 uursklok",
+    "24Hour": "24 uursklok",
+    "DateFormat": "Datum formaat",
+    "Country": "Land",
+    "UseEmergencyServices": "Gebruik maken van ISN's nooddiensten",
+    "AllowBackgroundUpdate": "Bijwerken op de achtergrond toestaan",
+    "NotRecommended": "(Niet aangeraden)",
+    "tempunit": "Temperatuureenheid"
+  },
+  "Countries": {
+    "BE": "België", "België": "BE",
+    "UK": "Verenigd Koninkrijk", "Verenigd Koninkrijk": "UK",
+    "NL": "Nederland", "Nederland": "NL",
+    "FR": "Frankrijk", "Frankrijk": "FR",
+    "ES": "Spanje", "Spanje": "ES"
+  }
+  }

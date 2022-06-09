@@ -1,0 +1,56 @@
+{
+  "Metadata": {
+    "LangCode": "jp",
+    "LangName": "日本語",
+    "LangBuild": "3"
+  },
+
+  "PlsWait": "お待ちください...",
+  "Setup": {
+    "Welcome": "ようこそ!",
+
+    "Language Select": "お好みの言語を選択してください。",
+    "ChangeLanguageLater": "必要であれば、後で言語設定を変更することができます。",
+    "Recommended": "推奨言語",
+    "OtherLang": "その他の使用可能言語",
+
+    "UpdateTitle": "アップデートを確認中...",
+    "TimeToUpdate": "確認中...",
+    "ExtraUpdateInfo": "更新の頻度は、設定で自由に変更できます。",
+
+    "AppearanceTitle": "お気に入りのルックを選ぶ時間。",
+    "AppearanceExtra": "ここでは、外見を変更することができます。しかし、いくつかのオプションは使用できません。",
+    "ChooseLook": "ルックを選ぶ",
+    "ChooseLookWording": "外観を選択し、ボタン、コンテキストメニュー、背景がどのように調整されるかを確認することができます。",
+    "GradientOnly": "グラデーションのみ",
+    "Photos": "写真のみ（最速）",
+    "BlackAndWhite": "ブラック・ホワイト",
+    "Gradient+3D": "グラデーション＋3Dアニメーション",
+
+    "Saving": "節約...",
+    "IntialSaving": "すべて完了しました。これで設定の保存が完了しました。",
+    "WritingToFile": "保存ファイルへの書き込み...",
+
+    "Finished": "Welcome to ISN Forecast!",
+    "ThankYou": "",
+
+    "LastStepTitle": "最後のステップ",
+    "LastStepDesc": "ISN Forecastを最大限に活用するために、情報が正しいかどうか確認する必要があります。間違っている場合は、訂正をお願いします。",
+    "TimeFormat": "タイムフォーマット",
+    "12Hour": "12時間（午前／午後）",
+    "24Hour": "24時間",
+    "DateFormat": "日付形式",
+    "Country": "国名",
+    "UseEmergencyServices": "緊急時サービスの利用をオプトインする。",
+    "AllowBackgroundUpdate": "バックグラウンドでの更新を可能にする。",
+    "NotRecommended": "(推奨しません)",
+    "tempunit": "温度単位"
+  },
+  "Countries": {
+    "BE": "ベルギー", "ベルギー": "BE",
+    "UK": "イギリス", "イギリス": "UK",
+    "NL": "オランダ", "オランダ": "NL",
+    "FR": "フランス", "フランス": "FR",
+    "ES": "スペイン", "スペイン": "ES"
+  }
+}

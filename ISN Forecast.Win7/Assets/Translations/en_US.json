@@ -1,0 +1,69 @@
+{
+  "Metadata": {
+    "LangCode": "en_US",
+    "LangName": "English (US)",
+    "LangBuild": "5"
+  },
+
+  "PlsWait": "Please wait...",
+  "Setup": {
+    "Welcome": "Welcome!",
+
+    "Language Select": "Select your preferred language.",
+    "ChangeLanguageLater": "You can modify the language settings later on if needed.",
+    "Recommended": "Recommended",
+    "OtherLang": "Other available languages",
+
+    "UpdateTitle": "Checking for updates...",
+    "TimeToUpdate": "Time to check for updates!",
+    "ExtraUpdateInfo": "Feel free to change the frequency of the updates in the settings!",
+
+    "AppearanceTitle": "Time to choose your favorite look!",
+    "AppearanceExtra": "You can modify your looks here. But there are a few options unavailable.",
+    "ChooseLook": "Choose your look.",
+    "ChooseLookWording": "Select an appearance and see how the buttons, context menus and background adjust depending on which one you choose.",
+    "GradientOnly": "Gradient Only",
+    "Photos": "Photos Only (Fastest)",
+    "BlackAndWhite": "Black and White",
+    "Gradient+3D": "Gradient + 3D Animations",
+
+    "Saving": "Saving...",
+    "IntialSaving": "All done! We're now saving your settings!",
+    "WritingToFile": "Writing to a save file...",
+
+    "Finished": "Welcome to ISN Forecast!",
+    "ThankYou": "",
+
+    "LastStepTitle": "The last step",
+    "LastStepDesc": "To take full advantage of ISN Forecast, we require you to confirm if the information is correct. If not please correct them.",
+    "TimeFormat": "Time Format",
+    "12Hour": "12-Hour",
+    "24Hour": "24-Hour",
+    "DateFormat": "Date Format",
+    "Country": "Country",
+    "UseEmergencyServices": "Opt in to use emergency services",
+    "AllowBackgroundUpdate": "Allow background updating",
+    "NotRecommended": "(Not recommended)",
+    "tempunit": "Unit"
+  },
+  "Countries": {
+    "BE": "Belgium", "Belgium": "BE",
+    "UK": "United Kingdom", "United Kingdom": "UK",
+    "NL": "Netherlands", "Netherlands": "NL",
+    "FR": "France", "France": "FR",
+    "ES": "Spain", "Spain": "ES"
+  },
+  "UVIndex": {
+    "1": "Low | This level isn't dangerous and no special measures have to be taken.",
+    "2": "Low | This level isn't dangerous and no special measures have to be taken.",
+    "3": "Medium | Wearing sunscreen is recommended.",
+    "4": "Medium | Wearing sunscreen is recommended & seek shade.",
+    "5": "Medium | Wearing sunscreen is recommended, seek shade and wear a hat.",
+    "6": "High | Being outside for a while isn't the best idea.",
+    "7": "High | Being outside for a while isn't the best idea.",
+    "8": "Very High | Being outside for a while isn't the best idea.",
+    "9": "Very High | Being outside for a while isn't the best idea.",
+    "10": "Extreme | Avoid being outside, wear sunscreen and only go outside when needed.",
+    "11": "Extreme | Do NOT go outside."
+  }
+}

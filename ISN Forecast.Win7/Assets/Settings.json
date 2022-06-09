@@ -1,0 +1,13 @@
+[
+  {
+    "OOBESetup": "False",
+    "Language": "en_US",
+    "Appearance": "Gradient",
+    "TimeFormat": "24",
+    "DateFormat": "DD/MM/YYYY",
+    "Country": "BE",
+    "AllowAlerts": "True",
+    "AllowAutoUpdate": "False",
+    "Unit": "temp_c"
+  }
+]
