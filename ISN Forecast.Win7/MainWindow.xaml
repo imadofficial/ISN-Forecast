@@ -1,0 +1,30 @@
+﻿<Window x:Class="ISN_Forecast.Win7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISN_Forecast.Win7"
+        mc:Ignorable="d"
+        Title="ISN Forecast" Height="450" Width="800" Icon="Assets/WeatherIcons/App.ico"
+        MinHeight="500" MinWidth="785"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        x:Name="Screen"
+        SizeChanged="Window_SizeChanged">
+    
+    <Grid>
+        <Rectangle>
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop x:Name="GradientTop"  Color="#000000" Offset="0.0" />
+                    <GradientStop x:Name="GradientBottom" Color="#000000" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+
+        <Frame x:Name="MainContents" Margin="0,0,0,0" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="StatusBar" VerticalAlignment="Top" Margin="0,0,0,0" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="ButtonedScreen" VerticalAlignment="Top" Margin="0,-10240,0,0" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

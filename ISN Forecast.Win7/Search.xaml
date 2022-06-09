@@ -1,0 +1,85 @@
+﻿<Page x:Class="ISN_Forecast.Win7.Search"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISN_Forecast.Win7"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="800" x:Name="SearchPage"
+      Title="Search">
+
+    <Grid>
+        <Button Click="Close_Click" IsEnabled="True" x:Name="Close" Opacity="1" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="30,10,0,0">
+            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/FirstSetup/Back.png"/>
+        </Button>
+
+        <Button IsEnabled="True" x:Name="Clear" Opacity="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="0,10,30,0">
+            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/FirstSetup/Back.png"/>
+        </Button>
+
+        <Border x:Name="Querybox" Opacity="1" Width="600" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#808080" CornerRadius="10">
+            <StackPanel>
+                <TextBox Margin="20,0,20,0" Name="Query" TextChanged="Query_TextChanged" />
+
+
+                <DockPanel>
+                    <TextBlock x:Name="Source" Text="Loading" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Left" FontSize="18" Margin="20,0,20,0"/>
+                </DockPanel>
+            </StackPanel>
+        </Border>
+
+        <StackPanel>
+            <Border x:Name="Result1" Opacity="1" Height="62" Width="600" Margin="0,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#808080" CornerRadius="10">
+                <StackPanel>
+                    <TextBlock x:Name="City1" Text="Osaka" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Left" FontSize="28" Margin="20,2,20,0"/>
+                    <TextBlock x:Name="Country1" Text="Osaka Prefacture, Japan" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Left" FontSize="18" Margin="20,0,20,0"/>
+                    <Button Click="Enter1_Click" x:Name="Enter1" IsEnabled="True"  Opacity="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="0,-50,30,0">
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/FirstSetup/Next.png"/>
+                    </Button>
+                </StackPanel>
+            </Border>
+
+            <Border  x:Name="Result2" Opacity="1" Height="62" Width="600" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#808080" CornerRadius="10">
+                <StackPanel>
+                    <TextBlock x:Name="City2" Text="Tokyo" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Left" FontSize="28" Margin="20,2,20,0"/>
+                    <TextBlock x:Name="Country2" Text="Tokyo Prefacture, Japan" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Left" FontSize="18" Margin="20,0,20,0"/>
+                    <Button IsEnabled="True" x:Name="Go2" Opacity="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="0,-50,30,0">
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/FirstSetup/Next.png"/>
+                    </Button>
+                </StackPanel>
+            </Border>
+
+            <Border x:Name="Result3" Opacity="1" Height="62" Width="600" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#808080" CornerRadius="10">
+                <StackPanel>
+                    <TextBlock x:Name="City3" Text="Yokohama" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Left" FontSize="28" Margin="20,2,20,0"/>
+                    <TextBlock x:Name="Country3" Text="Kanagawa Prefecture, Japan" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Left" FontSize="18" Margin="20,0,20,0"/>
+                    <Button IsEnabled="True" x:Name="Go3" Opacity="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="0,-50,30,0">
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/FirstSetup/Next.png"/>
+                    </Button>
+                </StackPanel>
+            </Border>
+
+            <Border x:Name="Result4" Opacity="1" Height="62" Width="600" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#808080" CornerRadius="10">
+                <StackPanel>
+                    <TextBlock x:Name="City4" Text="Yokohama" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Left" FontSize="28" Margin="20,2,20,0"/>
+                    <TextBlock x:Name="Country4" Text="Kanagawa Prefecture, Japan" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Left" FontSize="18" Margin="20,0,20,0"/>
+                    <Button IsEnabled="True" x:Name="Go4" Opacity="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="0,-50,30,0">
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/FirstSetup/Next.png"/>
+                    </Button>
+                </StackPanel>
+            </Border>
+
+            <Border x:Name="Result5" Opacity="1" Height="62" Width="600" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#808080" CornerRadius="10">
+                <StackPanel>
+                    <TextBlock x:Name="City5" Text="名古屋市" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Left" FontSize="28" Margin="20,2,20,0"/>
+                    <TextBlock x:Name="Country5" Text="Aichi Prefecture, Japan" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" HorizontalAlignment="Left" FontSize="18" Margin="20,0,20,0"/>
+                    <Button IsEnabled="True" x:Name="Go5" Opacity="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="0,-50,30,0">
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/FirstSetup/Next.png"/>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <Frame x:Name="QueryResult" Margin="0,-10,0,0" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Page>
