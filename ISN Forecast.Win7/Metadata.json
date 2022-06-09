@@ -1,0 +1,54 @@
+{
+  "CurrentVersion": "1.0",
+  "Build": 1,
+  "SubBuild": 0,
+
+  "APIver": 1,
+  "APIKeyWeather": "",
+  "IPInfoKey": "",
+
+  "Conditions": {
+    "Moderate rain": {
+      "Top": "#67788C",
+      "Bottom": "#4D5B6D",
+      "Box": "#2e2e2e",
+      "Name": "Light rain"
+    },
+    "Light rain": {
+      "Top": "#67788C",
+      "Bottom": "#4D5B6D",
+      "Box": "#2e2e2e",
+      "Name": "Light rain"
+    },
+    "Patchy light rain": {
+      "Top": "#67788C",
+      "Bottom": "#4D5B6D",
+      "Box": "#2e2e2e",
+      "Name": "Light rain"
+    },
+    "Overcast": {
+      "Top": "#2a4a7d",
+      "Bottom": "#3c6ab5",
+      "Box": "#254dcf",
+      "Name": "Cloudy"
+    },
+    "Clear": {
+      "Top": "#2a4a7d",
+      "Bottom": "#45bed1",
+      "Box": "#254dcf",
+      "Name": "Clear"
+    },
+    "Partly cloudy": {
+      "Top": "#2a4a7d",
+      "Bottom": "#45bed1",
+      "Box": "#254dcf",
+      "Name": "Partly cloudy"
+    },
+    "Patchy light rain with thunder": {
+      "Top": "#67788C",
+      "Bottom": "#4D5B6D",
+      "Box": "#2e2e2e",
+      "Name": "Light thunderstorm"
+    }
+  }
+}
