@@ -197,7 +197,9 @@
     <Resource Include="Assets\Fonts\Latin-Based\SFPRODISPLAYSEMIBOLDITALIC.OTF" />
     <Resource Include="Assets\Fonts\Latin-Based\SFPRODISPLAYTHINITALIC.OTF" />
     <Resource Include="Assets\Fonts\Latin-Based\SFPRODISPLAYULTRALIGHTITALIC.OTF" />
-    <EmbeddedResource Include="Metadata.json" />
+    <EmbeddedResource Include="Metadata.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Assets\Countries.json" />
     <None Include="Assets\Settings-ASS.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

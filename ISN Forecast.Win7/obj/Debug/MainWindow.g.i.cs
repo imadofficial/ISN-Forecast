@@ -10,12 +10,7 @@
 //------------------------------------------------------------------------------
 
 using ISN_Forecast.Win7;
-using ModernWpf;
-using ModernWpf.Controls;
-using ModernWpf.Controls.Primitives;
-using ModernWpf.DesignTime;
-using ModernWpf.Markup;
-using ModernWpf.Media.Animation;
+using ISN_Forecast.Win7.FirstSetup;
 using System;
 using System.Diagnostics;
 using System.Windows;

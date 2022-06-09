@@ -4,8 +4,8 @@
   "SubBuild": 0,
 
   "APIver": 1,
-  "APIKeyWeather": "",
-  "IPInfoKey": "",
+  "APIKeyWeather": "b48046722eb448daafa173827211511",
+  "IPInfoKey": "8b4cf3d192a801",
 
   "Conditions": {
     "Moderate rain": {
