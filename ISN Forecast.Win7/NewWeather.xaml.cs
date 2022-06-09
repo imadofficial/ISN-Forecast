@@ -114,7 +114,7 @@ namespace ISN_Forecast.Win7
             GlobalStrings.IP = e.Result;
 
             WebClient webClient = new WebClient();
-            webClient.DownloadStringAsync(new Uri("https://ipinfo.io/" + GlobalStrings.IP + "/json"));
+            webClient.DownloadStringAsync(new Uri("http://ip-api.com/json/" + GlobalStrings.IP)); // new api, no changes needed to other code luckily!
             webClient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(ProcessLocation);
         }
 
