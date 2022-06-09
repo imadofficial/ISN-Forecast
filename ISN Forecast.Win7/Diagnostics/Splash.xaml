@@ -1,0 +1,28 @@
+﻿<Page x:Class="ISN_Forecast.Win7.Diagnostics.Splash"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISN_Forecast.Win7.Diagnostics"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Splash">
+
+    <Grid>
+        <Border x:Name="ConnectionTest" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="1" Height="60" Width="Auto" Margin="0,20,420,0" Background="#303030" CornerRadius="10">
+            <StackPanel>
+                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="ConnectionTitle" FontSize="18" Text="Connecting testing" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="ConnectionDescription" TextWrapping="Wrap" FontSize="14" Text="Check weather or not you have issues reaching ISN Servers." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Height="50" Width="8000" Opacity="0" Margin="0,-43,0,0" />
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="FileIntegrity" VerticalAlignment="Top" HorizontalAlignment="Center" Opacity="1" Height="60" Width="Auto" Margin="420,20,0,0" Background="#303030" CornerRadius="10">
+            <StackPanel>
+                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="FileIntegrityTitle" FontSize="18" Text="File Integrity" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="FileIntegrityDescription" TextWrapping="Wrap" FontSize="14" Text="Check the ISN Forecast's installation files for corruption and / or modifications" Margin="20,0,20,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Height="50" Width="8000" Opacity="0" Margin="0,-43,0,0" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
