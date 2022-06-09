@@ -366,3 +366,4 @@ FodyWeavers.xsd
 **/obj/
 **/bin/
 packages/
+ISN Forecast.Win7/Metadata.json
