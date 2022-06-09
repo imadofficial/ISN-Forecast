@@ -99,5 +99,10 @@ namespace ISN_Forecast.Win7
 
             
         }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Instance.MainContents.Content = new NewWeather();
+        }
     }
 }
