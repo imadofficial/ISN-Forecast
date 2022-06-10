@@ -318,60 +318,21 @@ namespace ISN_Forecast.Win7
             await Task.Delay(500);
             //This is likely the most complicated feature yet. I will prob end up rewriting this feature soon.
             var FutureData = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(e.Result);
-
+            int count1 = 0;
             int CurrentHour = DateTime.Now.Hour;
+
             String TextHour = DateTime.Now.ToString("HH");
 
-            string One = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(0)][Configs.Unit] + "°C";
-            string Two = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(1)][Configs.Unit] + "°C";
-            string Three = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(2)][Configs.Unit] + "°C";
-            string Four = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(3)][Configs.Unit] + "°C";
-            string Five = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(4)][Configs.Unit] + "°C";
-            string Six = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(5)][Configs.Unit] + "°C";
-            string Seven = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(6)][Configs.Unit] + "°C";
-            string Eight = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(7)][Configs.Unit] + "°C";
-            string Nine = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(8)][Configs.Unit] + "°C";
-            string Ten = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(9)][Configs.Unit] + "°C";
-            string Eleven = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(10)][Configs.Unit] + "°C";
-            string Twelve = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(11)][Configs.Unit] + "°C";
-            string One3 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(12)][Configs.Unit] + "°C";
-            string One4 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(13)][Configs.Unit] + "°C";
-            string One5 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(14)][Configs.Unit] + "°C";
-            string One6 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(15)][Configs.Unit] + "°C";
-            string One7 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(16)][Configs.Unit] + "°C";
-            string One8 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(17)][Configs.Unit] + "°C";
-            string One9 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(18)][Configs.Unit] + "°C";
-            string Two0 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(19)][Configs.Unit] + "°C";
-            string Two1 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(20)][Configs.Unit] + "°C";
-            string Two2 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(21)][Configs.Unit] + "°C";
-            string Two3 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(22)][Configs.Unit] + "°C";
-            string Two4 = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(23)][Configs.Unit] + "°C";
-            int index = One.IndexOf(".");
-            if (index >= 0)
-                Temp1.Text = One.Substring(0, index) + Configs.UnitChar;
-                Temp2.Text = Two.Substring(0, index) + Configs.UnitChar;
-                Temp3.Text = Three.Substring(0, index) + Configs.UnitChar;
-                Temp4.Text = Four.Substring(0, index) + Configs.UnitChar;
-                Temp5.Text = Five.Substring(0, index) + Configs.UnitChar;
-                Temp6.Text = Six.Substring(0, index) + Configs.UnitChar;
-                Temp7.Text = Seven.Substring(0, index) + Configs.UnitChar;
-                Temp8.Text = Eight.Substring(0, index) + Configs.UnitChar;
-                Temp9.Text = Nine.Substring(0, index) + Configs.UnitChar;
-                Temp10.Text = Ten.Substring(0, index) + Configs.UnitChar;
-                Temp11.Text = Eleven.Substring(0, index) + Configs.UnitChar;
-                Temp12.Text = Twelve.Substring(0, index) + Configs.UnitChar;
-                Temp13.Text = One3.Substring(0, index) + Configs.UnitChar;
-                Temp14.Text = One4.Substring(0, index) + Configs.UnitChar;
-                Temp15.Text = One5.Substring(0, index) + Configs.UnitChar;
-                Temp16.Text = One6.Substring(0, index) + Configs.UnitChar;
-                Temp17.Text = One7.Substring(0, index) + Configs.UnitChar;
-                Temp18.Text = One8.Substring(0, index) + Configs.UnitChar;
-                Temp19.Text = One9.Substring(0, index) + Configs.UnitChar;
-                Temp20.Text = Two0.Substring(0, index) + Configs.UnitChar;
-                Temp21.Text = Two1.Substring(0, index) + Configs.UnitChar;
-                Temp22.Text = Two2.Substring(0, index) + Configs.UnitChar;
-                Temp23.Text = Two3.Substring(0, index) + Configs.UnitChar;
-                Temp24.Text = Two4.Substring(0, index) + Configs.UnitChar;
+            foreach (TextBox tempText in FutureTwoDays.Children.OfType<TextBox>())
+            {
+                tempText.Text = FutureData["forecast"]["forecastday"][0]["hour"][ReturnTime(count1)][Configs.Unit] + "°C";
+                count1++;
+
+                if(count1 == 23)
+                {
+                    count1 = 0;
+                }
+            }
 
             Hour1.Text = "Now";
             Hour2.Text = ReturnTime(1) + ":00";
