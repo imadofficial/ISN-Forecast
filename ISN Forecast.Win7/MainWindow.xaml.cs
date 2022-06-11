@@ -73,22 +73,31 @@ namespace ISN_Forecast.Win7
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            var ScreenWidth = Screen.Width;
+            var ScreenWidth = Screen.ActualWidth;
             var ScreenWidthString = Screen.Width.ToString();
 
 
             if (Configs.SetupProcess == "Complete")
             {
-                if (ScreenWidth > 1100)
+                if (ScreenWidth > 1400)
+                {
+                    NewWeather.Instance.SevenDay.Margin = new Thickness(0, -120, 0, 0);
+                    NewWeather.Instance.SevenDay.HorizontalAlignment = HorizontalAlignment.Left;
+                }
+                if (ScreenWidth >= 1100 && ScreenWidth <= 1400)
                 {
                     NewWeather.Instance.AQIBox.Margin = new Thickness(0, -100, 570, 0);
                     NewWeather.Instance.AQIBox.HorizontalAlignment = HorizontalAlignment.Right;
+                    NewWeather.Instance.SevenDay.HorizontalAlignment = HorizontalAlignment.Center;
+                    NewWeather.Instance.SevenDay.Margin = new Thickness(0, 10, 0, 0);
 
                 }
                 if (ScreenWidth < 1100)
                 {
                     NewWeather.Instance.AQIBox.Margin = new Thickness(0, 10, 0, 0);
-                    NewWeather.Instance.AQIBox.HorizontalAlignment = HorizontalAlignment.Center;
+                    NewWeather.Instance.AQIBox.HorizontalAlignment = HorizontalAlignment.Right;
+                    NewWeather.Instance.SevenDay.HorizontalAlignment = HorizontalAlignment.Left;
+                    NewWeather.Instance.SevenDay.Margin = new Thickness(0, -120, 0, 0);
                 }
             }
             if (Configs.SetupProcess == "NotComplete")

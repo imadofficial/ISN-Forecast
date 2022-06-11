@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ISN_Forecast.Win7"
         mc:Ignorable="d"
         Title="ISN Forecast" Height="450" Width="800" Icon="Assets/WeatherIcons/App.ico"
-        MinHeight="500" MinWidth="785"
+        MinHeight="500" MinWidth="845"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         x:Name="Screen"
         SizeChanged="Window_SizeChanged">
