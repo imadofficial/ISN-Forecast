@@ -18,8 +18,5 @@ We currently don't have that many services but my goal is to have in every count
 
 By using ISN Weather Channel, you agree to these companies' terms and conditions (depending on where you're located).
 
-## Earthquake happening in your area?
-No need to worry if you live in an area that is known to have earthquakes. With a collaboration with [USGS](https://earthquake.usgs.gov/), we are making it possible to notify you whenever an earthquake strikes in your area and get to safety as fast as we can.
-
-## Then what about tsunamis?
-As for tsunamis, it still won't be available for another while. Mainly because i have no idea if such API's even exist. We'll investigate into it further & update this readme whenever new information becomes available.
+## Does it warn users for upcoming earthquakes?
+Are you in a known earthquake sensitive area? No worries. Together with [USGS](https://earthquake.usgs.gov/) we are given the ability to warn our users for upcoming earthquakes minutes before they happen. This feature isn't baked into Forecast just yet but we're planning to add it in the future.
