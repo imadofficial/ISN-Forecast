@@ -29,10 +29,31 @@ namespace ISN_Forecast.Win7
         public Statusbar()
         {
             InitializeComponent();
+            string Settings = File.ReadAllText("Assets/Settings.json");
+            var SettingsJSON = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(Settings);
+
+            if (SettingsJSON[0]["TimeFormat"] == "24" || SettingsJSON[0]["TimeFormat"] == "12")
+            {
+                Timer.Tick += new EventHandler(Timer_Click);
+                Timer.Interval = new TimeSpan(0, 0, 1);
+                Timer.Start();
+            }
+            else
+            {
+                Timer.Tick += new EventHandler(DefaultTimer);
+                Timer.Interval = new TimeSpan(0, 0, 1);
+                Timer.Start();
+            }
+
+
             Instance = this;
-            Timer.Tick += new EventHandler(Timer_Click);
-            Timer.Interval = new TimeSpan(0, 0, 1);
-            Timer.Start();
+            
+        }
+
+        private void DefaultTimer(object sender, EventArgs e)
+        {
+            Time.Text = DateTime.Now.ToString("HH:mm");
+            Date.Text = DateTime.UtcNow.ToString("MM/dd/yyyy");
         }
 
         private void Timer_Click(object sender, EventArgs e)
@@ -96,8 +117,6 @@ namespace ISN_Forecast.Win7
         private void Globe_Click(object sender, RoutedEventArgs e)
         {
             Status.Text = "Globe";
-
-            
         }
 
         private void Refresh_Click(object sender, RoutedEventArgs e)

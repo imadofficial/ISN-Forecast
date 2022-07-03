@@ -79,25 +79,21 @@ namespace ISN_Forecast.Win7
 
             if (Configs.SetupProcess == "Complete")
             {
-                if (ScreenWidth > 1400)
+                if (ScreenWidth > 1480)
                 {
-                    NewWeather.Instance.SevenDay.Margin = new Thickness(0, -120, 0, 0);
-                    NewWeather.Instance.SevenDay.HorizontalAlignment = HorizontalAlignment.Left;
-                }
-                if (ScreenWidth >= 1100 && ScreenWidth <= 1400)
-                {
-                    NewWeather.Instance.AQIBox.Margin = new Thickness(0, -100, 570, 0);
-                    NewWeather.Instance.AQIBox.HorizontalAlignment = HorizontalAlignment.Right;
-                    NewWeather.Instance.SevenDay.HorizontalAlignment = HorizontalAlignment.Center;
-                    NewWeather.Instance.SevenDay.Margin = new Thickness(0, 10, 0, 0);
 
                 }
-                if (ScreenWidth < 1100)
+                if (ScreenWidth >= 1180 && ScreenWidth <= 1480)
                 {
-                    NewWeather.Instance.AQIBox.Margin = new Thickness(0, 10, 0, 0);
-                    NewWeather.Instance.AQIBox.HorizontalAlignment = HorizontalAlignment.Right;
-                    NewWeather.Instance.SevenDay.HorizontalAlignment = HorizontalAlignment.Left;
+                    MainContents.Width = 1180;
+                    NewWeather.Instance.SevenDay.Margin = new Thickness(50, -250, 0, 0);
+                    NewWeather.Instance.AQIBox.Margin = new Thickness(0, 10, 210, 0);
+                }
+                if (ScreenWidth <= 1179)
+                {
+                    MainContents.Width = 900;
                     NewWeather.Instance.SevenDay.Margin = new Thickness(0, -120, 0, 0);
+                    //NewWeather.Instance.UVBox.Margin = new Thickness(0, 10, 0, 0);
                 }
             }
             if (Configs.SetupProcess == "NotComplete")

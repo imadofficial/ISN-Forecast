@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ISN_Forecast.Win7"
         mc:Ignorable="d"
         Title="ISN Forecast" Height="450" Width="800" Icon="Assets/WeatherIcons/App.ico"
-        MinHeight="500" MinWidth="845"
+        MinHeight="500" MinWidth="900"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         x:Name="Screen"
         SizeChanged="Window_SizeChanged">
@@ -23,7 +23,7 @@
 
 
 
-        <Frame x:Name="MainContents" Margin="0,0,0,0" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="MainContents" Width="900" NavigationUIVisibility="Hidden"/>
         <Frame x:Name="StatusBar" VerticalAlignment="Top" Margin="0,0,0,0" NavigationUIVisibility="Hidden"/>
         <Frame x:Name="ButtonedScreen" VerticalAlignment="Top" Margin="0,-10240,0,0" NavigationUIVisibility="Hidden"/>
     </Grid>
