@@ -1,13 +1,185 @@
 {
   "CurrentVersion": "1.0",
-  "Build": 1,
-  "SubBuild": 0,
+  "Build": 46,
+  "SubBuild": 3,
 
-  "APIver": 1,
-  "APIKeyWeather": "",
-  "IPInfoKey": "",
+  "APIver": 529,
+  "APIKeyWeather": "PASTE_HERE",
+  "IPInfoKey": "PASTE_HERE",
+
+    "list": [
+      {
+        "ID": 0,
+        "Name": "English (US)",
+        "Code": "en-US",
+        "Checksum": "",
+        "Status": "1"
+      },
+      {
+        "ID": 1,
+        "Name": "Français (Belgique)",
+        "Code": "fr-BE",
+        "Checksum": "",
+        "Status": "1"
+      },
+      {
+        "ID": 2,
+        "Name": "Nederlands (België)",
+        "Code": "nl-BE",
+        "Checksum": "",
+        "Status": "1"
+      },
+      {
+        "ID": 3,
+        "Name": "日本語",
+        "Code": "jp",
+        "Checksum": "",
+        "Status": "1"
+      },
+      {
+        "ID": 4,
+        "Name": "中文(简体)",
+        "Code": "cn-SP",
+        "Checksum": "",
+        "Status": "1"
+      },
+      {
+        "ID": 5,
+        "Name": "한국어",
+        "Code": "kr",
+        "Checksum": "",
+        "Status": "1"
+      }
+    ],
 
   "Conditions": {
+    "800": {
+      "ID": "1",
+
+      "01d": {
+        "Top": "#0C51A9",
+        "Bottom": "#7AC0E8"
+      },
+
+      "01n": {
+        "Top": "#050318",
+        "Bottom": "#2E3955"
+      }
+    },
+
+    "801": {
+      "ID": "6",
+
+      "02d": {
+        "Top": "#0C51AA",
+        "Bottom": "#7AC0E8"
+      },
+
+      "02n": {
+        "Top": "#050318",
+        "Bottom": "#2E3955"
+      }
+    },
+
+    "802": {
+      "ID": "2",
+
+      "03d": {
+        "Top": "#0C51AA",
+        "Bottom": "#7AC0E8"
+      },
+
+      "03n": {
+        "Top": "#050318",
+        "Bottom": "#2E3955"
+      }
+    },
+
+    "803": {
+      "ID": "3",
+
+      "04d": {
+        "Top": "#0C51AA",
+        "Bottom": "#7AC0E8"
+      },
+
+      "04n": {
+        "Top": "#050318",
+        "Bottom": "#2E3955"
+      }
+    },
+
+    "804": {
+      "ID": "3",
+
+      "04d": {
+        "Top": "#0C51AA",
+        "Bottom": "#7AC0E8"
+      },
+
+      "04n": {
+        "Top": "#050318",
+        "Bottom": "#2E3955"
+      }
+    },
+
+    "781": {
+      "ID": "4",
+
+      "50d": {
+        "Top": "#696A61",
+        "Bottom": "#7D7D7D"
+      },
+      "50n": {
+        "Top": "#696A61",
+        "Bottom": "#7D7D7D"
+      }
+    },
+
+    "500": {
+      "ID": "5",
+
+      "10d": {
+        "Top": "#627185",
+        "Bottom": "#475667"
+      },
+
+      "10n": {
+        "Top": "#06050B",
+        "Bottom": "#1F262F"
+      }
+    },
+    "501": {
+      "ID": "5",
+
+      "10d": {
+        "Top": "#627185",
+        "Bottom": "#475667"
+      },
+
+      "10n": {
+        "Top": "#06050B",
+        "Bottom": "#1F262F"
+      }
+    },
+    "502": {
+      "ID": "7",
+
+      "10d": {
+        "Top": "#627185",
+        "Bottom": "#475667"
+      },
+
+      "10n": {
+        "Top": "#06050B",
+        "Bottom": "#1F262F"
+      }
+    },
+
+
+
+
+
     "Moderate rain": {
       "Top": "#67788C",
       "Bottom": "#4D5B6D",
@@ -49,6 +221,12 @@
       "Bottom": "#4D5B6D",
       "Box": "#2e2e2e",
       "Name": "Light thunderstorm"
+    },
+    "Sunny": {
+      "Top": "#2a4a7d",
+      "Bottom": "#45bed1",
+      "Box": "#254dcf",
+      "Name": "Sunny"
     }
   }
 }
