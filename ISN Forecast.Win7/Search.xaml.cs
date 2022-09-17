@@ -1,4 +1,8 @@
-﻿using System;
+using ISN_Forecast.Win7.FirstSetup;
+using ISN_Forecast.Win7.API;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -13,6 +17,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Net.Http;
+using System.Windows.Media.Animation;
+using System.Windows.Media.Effects;
+using System.IO;
 
 namespace ISN_Forecast.Win7
 {
@@ -22,74 +30,331 @@ namespace ISN_Forecast.Win7
     public partial class Search : Page
     {
         public static Search Instance;
+
+        public static class GlobalStrings
+        {
+            public static String Region;
+            public static String Temperature;
+            public static String Condition;
+            public static String ReusultID;
+            public static String LocalTime;
+        }
+
         public Search()
         {
+            var Lang = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(Configs.Translations);
             InitializeComponent();
+
+            Title1.Text = Lang["Search"]["NothingHere"];
+            Title2.Text = Lang["Search"]["NothingInstruct"];
+            Ani();
             Instance = this;
         }
 
-        private void Close_Click(object sender, RoutedEventArgs e)
+        public async void Ani()
         {
-            Statusbar.Instance.Status.Text = "Current Weather";
+            QuinticEase c = new QuinticEase();
+            c.EasingMode = EasingMode.EaseInOut;
+
+            QuinticEase b = new QuinticEase();
+            b.EasingMode = EasingMode.EaseOut;
+
+            DoubleAnimation Fade = new DoubleAnimation()
+            {
+                From = 0,
+                To = 0.5,
+                Duration = TimeSpan.FromSeconds(1),
+                EasingFunction = c
+            };
+
+            DoubleAnimation Fade2 = new DoubleAnimation()
+            {
+                From = 0,
+                To = 1,
+                Duration = TimeSpan.FromSeconds(1),
+                //EasingFunction = c
+            };
+
+            DoubleAnimation Fade3 = new DoubleAnimation()
+            {
+                From = 0,
+                To = 1,
+                Duration = TimeSpan.FromSeconds(1),
+                //EasingFunction = c
+            };
+
+            ThicknessAnimation TextAni = new ThicknessAnimation()
+            {
+                From = new Thickness(0, 20, 0, 0),
+                To = new Thickness(0, 0, 0, 0),
+                Duration = TimeSpan.FromSeconds(1),
+                EasingFunction = b
+            };
+
+            ForkieBG.BeginAnimation(Border.OpacityProperty, Fade);
+            Title1.BeginAnimation(TextBlock.OpacityProperty, Fade3);
+
+            Title1.BeginAnimation(TextBlock.MarginProperty, TextAni);
+            Title2.BeginAnimation(TextBlock.OpacityProperty, Fade2);
+            Title2.BeginAnimation(TextBlock.MarginProperty, TextAni);
+        }
+
+        private async void Close_Click(object sender, RoutedEventArgs e)
+        {
+            var Lang = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(Configs.Translations);
+            Statusbar.Instance.Status.Text = Lang["Weather"]["CurrentWeather"];
+            QuinticEase c = new QuinticEase();
+            c.EasingMode = EasingMode.EaseInOut;
+
+            QuinticEase b = new QuinticEase();
+            b.EasingMode = EasingMode.EaseOut;
+
+            DoubleAnimation Fade = new DoubleAnimation()
+            {
+                To = 0,
+                Duration = TimeSpan.FromSeconds(0.5),
+                EasingFunction = c
+            };
+
+            DoubleAnimation Fade2 = new DoubleAnimation()
+            {
+                To = 0,
+                Duration = TimeSpan.FromSeconds(0.5),
+                //EasingFunction = c
+            };
+
+            DoubleAnimation Fade3 = new DoubleAnimation()
+            {
+                To = 0,
+                Duration = TimeSpan.FromSeconds(0.5),
+                //EasingFunction = c
+            };
+
+            DoubleAnimation Gay = new DoubleAnimation()
+            {
+                To = 0,
+                Duration = TimeSpan.FromSeconds(0.2),
+                //EasingFunction = c
+            };
+
+            ForkieBG.BeginAnimation(Border.OpacityProperty, Fade);
+            Title1.BeginAnimation(TextBlock.OpacityProperty, Fade3);
+            Title2.BeginAnimation(TextBlock.OpacityProperty, Fade2);
+            Close.BeginAnimation(TextBlock.OpacityProperty, Fade2);
+            Query.BeginAnimation(TextBlock.OpacityProperty, Fade2);
+            DisplayResults.BeginAnimation(TextBlock.OpacityProperty, Fade2);
+            NewWeather.Instance.Effect.BeginAnimation(BlurEffect.RadiusProperty, Gay);
+            await Task.Delay(500);
+
+
             MainWindow.Instance.ButtonedScreen.Margin = new Thickness(0, -10240, 0, 0);
             NewWeather.Instance.Effect = null;
             NewWeather.Instance.ScrollPerms.IsEnabled = true;
 
-            Statusbar.Instance.Settings.IsEnabled = true; Statusbar.Instance.Settings.Opacity = 1;
-            Statusbar.Instance.Refresh.IsEnabled = true; Statusbar.Instance.Refresh.Opacity = 1;
+            //Statusbar.Instance.Settings.IsEnabled = true; Statusbar.Instance.Settings.Opacity = 1;
             Statusbar.Instance.Globe.IsEnabled = true; Statusbar.Instance.Globe.Opacity = 1;
+
+
+            BackgroundManager.Children.Remove(ForkieBG);
         }
 
         private void Query_TextChanged(object sender, TextChangedEventArgs e)
         {
-            try
-            {
-                WebClient webClient = new WebClient();
-                webClient.DownloadStringAsync(new Uri("https://api.weatherapi.com/v1/search.json?key=b48046722eb448daafa173827211511&q=" + Query.Text));
-                webClient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(ProcessLocation);
-            }catch(Exception ex)
-            {
+            var Lang = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(Configs.Translations);
+            DisplayResults.Children.Clear();
 
+            if (Query.Text.Length == 2)
+            {
+                Title1.Opacity = 1;
+                Title2.Opacity = 1;
+                Title1.Text = Lang["Search"]["InsuffChar"];
+                Title2.Text = Lang["Search"]["Type1More"];
+            }
+            if (Query.Text.Length == 1)
+            {
+                Title1.Opacity = 1;
+                Title2.Opacity = 1;
+                Title1.Text = Lang["Search"]["InsuffChar"];
+                Title2.Text = Lang["Search"]["Type2More"];
+            }
+            if (Query.Text.Length == 0)
+            {
+                Title1.Opacity = 1;
+                Title2.Opacity = 1;
+                Title1.Text = Lang["Search"]["NothingHere"];
+                Title2.Text = Lang["Search"]["NothingInstruct"];
+            }
+            if (Query.Text.Length > 2)
+            {
+                
+                try
+                {
+                    NoChars.Opacity = 0;
+                    ProcessRing.IsActive = true;
+                    WebClient webClient = new WebClient();
+                    webClient.DownloadStringAsync(new Uri("https://api.weatherapi.com/v1/search.json?key=PASTEHERE&q=" + Query.Text));
+                    webClient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(ProcessLocation);
+                }
+                catch (Exception)
+                {
+
+                }
             }
         }
 
-        private void ProcessLocation(object sender, DownloadStringCompletedEventArgs e)
+        public async void ProcessLocation(object sender, DownloadStringCompletedEventArgs e)
         {
-            Result1.Opacity = 0; Result2.Opacity = 0; Result3.Opacity = 0; Result4.Opacity = 0; Result5.Opacity = 0;
-            Result1.IsEnabled = false; Result2.IsEnabled = false; Result3.IsEnabled = false; Result4.IsEnabled = false; Result5.IsEnabled = false;
-            try
-            {
-                var QueryString = e.Result;
-                var SearchData = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(QueryString);
+            Weather.Search = e.Result;
 
-                City1.Text = SearchData[0]["name"];
-                Country1.Text = SearchData[0]["region"] + ", " + SearchData[0]["country"];
-                Result1.Opacity = 1; Result1.IsEnabled = true;
+            var SearchData = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(Weather.Search);
 
-                City2.Text = SearchData[1]["name"];
-                Country2.Text = SearchData[1]["region"] + ", " + SearchData[1]["country"];
-                Result2.Opacity = 1; Result2.IsEnabled = true;
+            dynamic jObj = JsonConvert.DeserializeObject(Weather.Search);
+            AmountFound.Text = SearchData.Count + " results were found.";
 
-                City3.Text = SearchData[2]["name"];
-                Country3.Text = SearchData[2]["region"] + ", " + SearchData[2]["country"];
-                Result3.Opacity = 1; Result3.IsEnabled = true;
+            ProcessRing.IsActive = false;
+                for (var i = 0; i < jObj.Count; i++) //var Result in jObj
+                {
 
-                City4.Text = SearchData[3]["name"];
-                Country4.Text = SearchData[3]["region"] + ", " + SearchData[3]["country"];
-                Result4.Opacity = 1; Result4.IsEnabled = true;
+                    var converter = new System.Windows.Media.BrushConverter();
+                String Lat = jObj[i].lat;
+                String Lon = jObj[i].lon;
 
-                City5.Text = SearchData[4]["name"];
-                Country5.Text = SearchData[4]["region"] + ", " + SearchData[4]["country"];
-                Result5.Opacity = 1; Result5.IsEnabled = true;
-            }
-            catch(Exception ex)
-            {
 
-            }
+                HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create("https://timeapi.io/api/Time/current/coordinate?latitude=" + Lat + "&longitude=" + Lon);
+                httpWebRequest.Method = "GET";
+
+                using (WebResponse response = httpWebRequest.GetResponse())
+                {
+                    HttpWebResponse httpResponse = response as HttpWebResponse;
+                    using (StreamReader reader = new StreamReader(httpResponse.GetResponseStream()))
+                    {
+                        var JSONFile = reader.ReadToEnd();
+                        var Data = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(JSONFile);
+                        GlobalStrings.LocalTime = Data["time"];
+                    }
+                }
+                    TextBlock City = new TextBlock();
+                    City.Text = jObj[i].name;
+                    City.VerticalAlignment = VerticalAlignment.Top;
+                    City.HorizontalAlignment = HorizontalAlignment.Left;
+                    City.Margin = new Thickness(20, -75, 20, 0);
+                    City.Foreground = (Brush)converter.ConvertFromString("#FFFFFF");
+                    City.FontSize = 28;
+                    City.FontFamily = new FontFamily(new Uri("pack://application:,,,/"), "./Assets/Fonts/Latin-Based/SFPRODISPLAYBOLD.OTF#SF Pro Display");
+
+                    String Place = jObj[i].region;
+
+                    if (Place.Length == 0)
+                    {
+                        GlobalStrings.Region = jObj[i].country;
+                    }
+                    if (Place.Length > 0)
+                    {
+                        GlobalStrings.Region = jObj[i].region + ", " + jObj[i].country;
+                    }
+
+                    TextBlock Region = new TextBlock();
+                    Region.Text = GlobalStrings.Region;
+                    Region.VerticalAlignment = VerticalAlignment.Top;
+                    Region.HorizontalAlignment = HorizontalAlignment.Left;
+                    Region.Margin = new Thickness(20, -45, 20, 0);
+                    Region.Foreground = (Brush)converter.ConvertFromString("#FFFFFF");
+                    Region.FontSize = 18;
+                    Region.FontFamily = new FontFamily(new Uri("pack://application:,,,/"), "./Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display");
+
+                    
+
+                    TextBlock Condition = new TextBlock();
+                    Condition.Text = "Condition Unknown";
+                    Condition.VerticalAlignment = VerticalAlignment.Bottom;
+                    Condition.HorizontalAlignment = HorizontalAlignment.Right;
+                    Condition.Margin = new Thickness(20, -10, 20, 0);
+                    Condition.Foreground = (Brush)converter.ConvertFromString("#FFFFFF");
+                    Condition.FontSize = 18;
+                    Condition.FontFamily = new FontFamily(new Uri("pack://application:,,,/"), "./Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display");
+
+                    TextBlock Time = new TextBlock();
+                    
+                    Time.Text = GlobalStrings.LocalTime;
+                    Time.VerticalAlignment = VerticalAlignment.Top;
+                    Time.HorizontalAlignment = HorizontalAlignment.Left;
+                    Time.Margin = new Thickness(20, -10, 20, 0);
+                    Time.Foreground = (Brush)converter.ConvertFromString("#FFFFFF");
+                    Time.FontSize = 18;
+                    Time.FontFamily = new FontFamily(new Uri("pack://application:,,,/"), "./Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display");
+
+                    TextBlock Temperatures = new TextBlock();
+
+                    //string url = "https://api.weatherapi.com/v1/forecast.json?key=" + Configs.Weatherkey + "&q=" + jObj[i].lat + "," + jObj[i].lon + "&aqi=no&alerts=yes";
+
+                    //HttpClient client = new HttpClient();
+
+                    //using (HttpResponseMessage response = client.GetAsync(url).Result)
+                    //{
+                    //    using (HttpContent content = response.Content)
+                    //    {
+                    //        var json = await content.ReadAsStringAsync();
+                   //         var WeatherData = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+                   //
+                    //        GlobalStrings.Temperature = WeatherData["current"][Configs.Unit] + "°";
+                    //    }
+                    //}
+
+                    Temperatures.Text = "";
+                    Temperatures.VerticalAlignment = VerticalAlignment.Top;
+                    Temperatures.HorizontalAlignment = HorizontalAlignment.Right;
+                    Temperatures.Margin = new Thickness(20, -75, 20, 0);
+                    Temperatures.Foreground = (Brush)converter.ConvertFromString("#FFFFFF");
+                    Temperatures.FontSize = 48;
+                    Temperatures.FontFamily = new FontFamily(new Uri("pack://application:,,,/"), "./Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display");
+
+                    Button SelectionPoint = new Button();
+                    SelectionPoint.Content = i.ToString();
+                    SelectionPoint.FontSize = 24;
+                    SelectionPoint.Height = 100;
+                    SelectionPoint.Width = 600;
+                    SelectionPoint.Margin = new Thickness(0, -92, 0, 0);
+                    SelectionPoint.Opacity = 0;
+                    SelectionPoint.Click += StartSearching_Click;
+
+                    StackPanel Container = new StackPanel();
+                    Container.Margin = new Thickness(0, 80, 0, 0);
+                    Container.Children.Add(City);
+                    Container.Children.Add(Region);
+                    Container.Children.Add(Temperatures);
+                    Container.Children.Add(Time);
+                    Container.Children.Add(SelectionPoint);
+
+
+                    Border ResultBox = new Border();
+                    ResultBox.Height = 100;
+                    ResultBox.Width = 600;
+                    ResultBox.HorizontalAlignment = HorizontalAlignment.Center;
+                    ResultBox.VerticalAlignment = VerticalAlignment.Top;
+                    ResultBox.CornerRadius = new CornerRadius(10);
+                    ResultBox.Background = (Brush)converter.ConvertFromString("#4E87AE");
+                    ResultBox.Margin = new Thickness(0, 20, 0, 0);
+                    ResultBox.Child = Container;
+
+                    DisplayResults.Children.Add(ResultBox);
+                }
         }
 
+        void StartSearching_Click(object sender, RoutedEventArgs e)
+        {
+            var ID = (e.Source as Button).Content.ToString();
+            SearchBasedLookup.Start(Int16.Parse(ID));
+        }
+
+        private async void WeatherData(object sender, DownloadStringCompletedEventArgs e)
+        {
+            var WeatherData = (dynamic)Newtonsoft.Json.JsonConvert.DeserializeObject(e.Result);
+            GlobalStrings.Temperature = WeatherData["current"][Configs.Unit] + "°";
+            GlobalStrings.Condition = WeatherData["current"]["condition"]["text"];
+        }
         private void Enter1_Click(object sender, RoutedEventArgs e)
         {
+            
             QueryResult.Margin = new Thickness(0, -10, 0, 0);
             QueryResult.Content = new SearchedLocation();
             MainWindow.Instance.GradientTop.Color = (Color)ColorConverter.ConvertFromString("#000000");
