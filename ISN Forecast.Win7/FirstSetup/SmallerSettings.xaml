@@ -6,64 +6,87 @@
       xmlns:local="clr-namespace:ISN_Forecast.Win7.FirstSetup"
       xmlns:ui="http://schemas.modernwpf.com/2019"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="800"
+      d:DesignHeight="900" d:DesignWidth="800"
       Title="SmallerSettings">
 
-    <Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" >
-            <StackPanel Margin="0,0,0,0" x:Name="Forks">
-                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Title" FontSize="24" Text="The last step" Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <StackPanel Margin="20,10,20,0" Opacity="1" Width="600" Height="Auto">
-                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Description" FontSize="21" Text="To take full advantage of ISN Forecast, we require you to confirm if the information is correct. If not please correct them."/>
-                </StackPanel>
-                
-                <StackPanel Margin="0,10,0,0">
-                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="TimeFormat" FontSize="26" Text="Time Format" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <DockPanel HorizontalAlignment="Center">
-                        <RadioButton x:Name="Two4Hour"  IsChecked="True" Margin="40,0,0,0" Content="24 Hour" Foreground="White"/>
-                        <RadioButton x:Name="One2Hour" Content="12 Hour" Foreground="White"/>
-                    </DockPanel>
-                </StackPanel>
+    <Grid x:Name="EndAnimation">
+        <Border x:Name="PanelBG" Background="#303134" MaxWidth="1366" Margin="20,10,20,20" CornerRadius="14" >
+            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" >
+                <StackPanel>
+                    
+                    <StackPanel Margin="0,0,0,0" x:Name="Forks">
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYBOLD.OTF#SF Pro Display" Foreground="White" x:Name="Title" FontSize="32" Text="The last step" Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        <StackPanel Margin="20,10,20,0" Opacity="1" Width="600" Height="Auto">
+                            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Description" FontSize="21" Text="To take full advantage of ISN Forecast, we require you to confirm if the information is correct. If not please correct them."/>
+                        </StackPanel>
 
-                <StackPanel Margin="0,10,0,0">
-                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Date" FontSize="26" Text="Date Format" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <DockPanel HorizontalAlignment="Center">
-                        <ComboBox x:Name="DateFormat">
-                            <ComboBoxItem>MM/DD/YYYY</ComboBoxItem>
-                            <ComboBoxItem IsSelected="True">DD/MM/YYYY</ComboBoxItem>
-                            <ComboBoxItem>YYYY/MM/DD</ComboBoxItem>
-                            <ComboBoxItem>YYYY/DD/MM</ComboBoxItem>
-                        </ComboBox>
-                    </DockPanel>
+                        <Border x:Name="Region" Background="#009FCA" Height="170" Width="360" Margin="-370,20,0,0" CornerRadius="14" >
+                            <StackPanel>
+                                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYBOLD.OTF#SF Pro Display" Foreground="White" x:Name="RegionTitle" FontSize="24" Text="Region" Margin="30,5,0,0" HorizontalAlignment="Left"/>
+
+
+                                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Country" FontSize="21" Margin="30,10,0,0" Text="Pays" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                    <ComboBox x:Name="CountrySelection" Margin="190,-32,0,0" Width="150" Height="30" />
+
+                                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="TimeFormat" FontSize="21" Margin="30,5,0,0" Text="Format Horaire" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                    <ComboBox x:Name="TimeFormatSelection" Margin="190,-30,0,0" Width="150" Height="30" />
+
+                                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="SpeedUnit" FontSize="21" Margin="30,5,0,0" Text="Speed format" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                <ComboBox x:Name="SpeedUnitSelection" Margin="190,-28,0,0" Width="150" Height="30" />
+
+                                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Percipitation" FontSize="21" Margin="30,5,0,0" Text="Percipitation" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                <ComboBox x:Name="PercipitationSelection" Margin="190,-28,0,0" Width="150" Height="30" />
+
+
+                            </StackPanel>
+                        </Border>
+
+                        <Border x:Name="AppSettings" Background="#009FCA" Height="170" Width="360" Margin="370,-170,0,0" CornerRadius="14" >
+                            <StackPanel>
+                                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYBOLD.OTF#SF Pro Display" Foreground="White" x:Name="AppSettingsTitle" FontSize="24" Text="Application" Margin="30,5,0,0" HorizontalAlignment="Left"/>
+                                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Date" FontSize="21" Text="Date Format" Margin="30,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                <ComboBox x:Name="DateFormat" Margin="190,-30,0,0" Width="150" Height="30">
+                                    <ComboBoxItem>MM/DD/YYYY</ComboBoxItem>
+                                    <ComboBoxItem IsSelected="True">DD/MM/YYYY</ComboBoxItem>
+                                    <ComboBoxItem>YYYY/MM/DD</ComboBoxItem>
+                                    <ComboBoxItem>YYYY/DD/MM</ComboBoxItem>
+                                </ComboBox>
+
+
+                                <StackPanel Margin="0,10,0,0">
+                                    <TextBlock Margin="30,-5,0,0" Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Unit" FontSize="21" Text="Unit" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                                    <ComboBox Margin="240,-30,0,0" Width="100" Height="30" x:Name="UnitBox">
+                                        <ComboBoxItem IsSelected="True">Celsius</ComboBoxItem>
+                                        <ComboBoxItem>Fahrenheit</ComboBoxItem>
+                                    </ComboBox>
+
+                                    <CheckBox IsChecked="False" x:Name="HideDate" HorizontalAlignment="Left" Margin="30,0,30,0" FontSize="18" Foreground="White" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Content="Hide date after a few seconds" />
+                                </StackPanel>
+                                
+                            </StackPanel>
+                        </Border>
+
+                        <Border x:Name="Optional" Background="#009FCA" Height="125" Width="360" Margin="0,20,0,0" CornerRadius="14" >
+                            <StackPanel>
+                                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYBOLD.OTF#SF Pro Display" Foreground="White" x:Name="OptionalTitle" FontSize="24" Text="Optional" Margin="30,5,0,0" HorizontalAlignment="Left"/>
+                                <CheckBox IsChecked="True" x:Name="EmergencyCheckbox" HorizontalAlignment="Left" Margin="30,0,30,0" FontSize="18" Foreground="White" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Content="Opt in to use emergency services." />
+                                <CheckBox x:Name="AutoUpdates" HorizontalAlignment="Left" Margin="30,5,30,0" FontSize="18" Foreground="White" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Content="Allow Forecast to auto-update in the background. (Not recommended)"/>
+
+                            </StackPanel>
+                        </Border>
+
+                        
+
+                    </StackPanel>
                 </StackPanel>
+            </ScrollViewer>
+        </Border>
 
-                <StackPanel Margin="0,10,0,0">
-                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Country" FontSize="26" Text="Country of residence" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <DockPanel HorizontalAlignment="Center">
-                        <ComboBox x:Name="CountrySelection" />
-                    </DockPanel>
-                </StackPanel>
-
-                <CheckBox IsChecked="True" x:Name="EmergencyCheckbox" HorizontalAlignment="Center" Margin="0,10,0,0" FontSize="18" Foreground="White" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Content="Opt in to use emergency services." />
-                <CheckBox x:Name="AutoUpdates" HorizontalAlignment="Center" Margin="0,5,0,0" FontSize="18" Foreground="White" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Content="Allow Forecast to auto-update in the background. (Not recommended)"/>
-
-                <StackPanel Margin="0,10,0,0">
-                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Unit" FontSize="26" Text="Unit" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                    <DockPanel HorizontalAlignment="Center">
-                        <ComboBox x:Name="UnitBox">
-                            <ComboBoxItem IsSelected="True">Celsius</ComboBoxItem>
-                            <ComboBoxItem>Fahrenheit</ComboBoxItem>
-                        </ComboBox>
-                    </DockPanel>
-                </StackPanel>
-                
-            </StackPanel>
-        </ScrollViewer>
-
-        <TextBlock TextAlignment="Center" Opacity="0" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,90,0" x:Name="NextText" FontSize="21" Text="Saving..."/>
-        <Button IsEnabled="True" x:Name="Next" Click="Next_Click" Opacity="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="0,20,20,0">
+        <TextBlock TextAlignment="Center" Opacity="0" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,50,0" x:Name="NextText" FontSize="21" Text="Saving..."/>
+        <Button IsEnabled="True" x:Name="Next" Click="Next_Click" Opacity="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" Height="50" Width="50"  Margin="0,0,20,0">
             <Image RenderOptions.BitmapScalingMode="HighQuality" Source="Next.png"></Image>
         </Button>
-        
+
     </Grid>
 </Page>

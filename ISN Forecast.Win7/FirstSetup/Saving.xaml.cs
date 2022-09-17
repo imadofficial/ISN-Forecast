@@ -66,7 +66,7 @@ namespace ISN_Forecast.Win7.FirstSetup
 
         public void Cleanup()
         {
-            Setup.Instance.MainContent.Content = new SetupCompleted();
+            //Setup.Instance.MainContent.Content = new SetupCompleted();
         }
     }
 }

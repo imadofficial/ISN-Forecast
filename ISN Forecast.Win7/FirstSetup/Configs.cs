@@ -17,14 +17,34 @@ namespace ISN_Forecast.Win7.FirstSetup
         public static String AllowAlerts;
         public static String AllowAutoUpdate;
         public static String Unit;
+        public static String GPS;
+        public static String Percipitation;
+        public static String Speed;
+        public static String UnitChar;
+        public static String AutoHideDate;
 
         public static String IPInfoKey;
         public static String Weatherkey;
         public static String Meta; //HAHAHAHA MARK ZUCKERBURG
         public static String SetupProcess;
+
+        public static String Latitude;
+        public static String Longitude;
+    }
+    
+    internal class AppBehavior
+    {
+        public static String Hamburger;
+        public static String Latitude; public static String Longitude;
     }
 
-    internal class Version
+    internal class Weather
+    {
+        public static String FullText;
+        public static String Search;
+    }
+
+        internal class Version
     {
         public static int Build;
         public static int SubBuild;
@@ -37,15 +57,5 @@ namespace ISN_Forecast.Win7.FirstSetup
 
         public static String BoxColorWhite = "#FFFFFF";
         public static String TextColorWhite = "#000000";
-    }
-
-    internal class UpdatesFound
-    {
-        public static int Build;
-        public static int SubBuild;
-
-        public static String Name;
-        public static String Size;
-        public static String Description;
     }
 }
