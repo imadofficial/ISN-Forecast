@@ -1,0 +1,46 @@
+﻿<Page x:Class="ISN_Forecast.Win7.SettingsApplets.About"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISN_Forecast.Win7.SettingsApplets"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="About">
+
+    <Grid>
+        <StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Image RenderOptions.BitmapScalingMode="HighQuality" Height="70" Width="70" Margin="-10,5,0,0" HorizontalAlignment="Left" Source="/App.ico" />
+                <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYBOLD.OTF#SF Pro Display" Foreground="White" x:Name="LogoAsset1" FontSize="42" Text="ISN Forecast" Margin="10,15,5,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            </StackPanel>
+            <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="CurrentVer" FontSize="28" Text="About" Margin="60,-10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Border x:Name="Versions" VerticalAlignment="Top" Opacity="1" Height="Auto" Width="Auto" Margin="40,5,40,0" Background="#303030" CornerRadius="10">
+                <StackPanel>
+                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="VerTitle" FontSize="18" Text="Version" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="VerValue" TextWrapping="Wrap" FontSize="18" Text="v1.0 (Beta 4)" Margin="0,-20,20,10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+
+                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="BuildTitle" FontSize="18" Text="Build number" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="BuildValue" TextWrapping="Wrap" FontSize="18" Text="513.1" Margin="0,-20,20,10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+
+                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="UpdateStatus" FontSize="18" Text="Software Update" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="UpdateValue" TextWrapping="Wrap" FontSize="18" Text="No updates were found" Margin="0,-20,20,10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                </StackPanel>
+            </Border>
+
+            <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="LangAbout" FontSize="28" Text="Language version" Margin="60,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Border x:Name="Language" VerticalAlignment="Top" Opacity="1" Height="Auto" Width="Auto" Margin="40,5,40,0" Background="#303030" CornerRadius="10">
+                <StackPanel>
+                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="LangTitle" FontSize="18" Text="Locale code" Margin="20,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="LangValue" TextWrapping="Wrap" FontSize="18" Text="en-US" Margin="0,-20,20,10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+
+                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="LangVerTitle" FontSize="18" Text="Locale version" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="LangVerValue" TextWrapping="Wrap" FontSize="18" Text="v14" Margin="0,-20,20,10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                </StackPanel>
+            </Border>
+
+            <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="A" TextWrapping="Wrap" FontSize="18" Text="Neptune5111 is a she btw" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Copyright" TextWrapping="Wrap" FontSize="18" Text="© 2022 - ISN Studios" Margin="0,0,0,10" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </StackPanel>
+    </Grid>
+</Page>

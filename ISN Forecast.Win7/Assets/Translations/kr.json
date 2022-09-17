@@ -1,0 +1,266 @@
+{
+  "Metadata": {
+    "LangCode": "kr",
+    "LangName": "한국어",
+    "LangBuild": "29",
+    "FontNormal": "/Assets/Fonts/Korean/Regular.ttf#IBM Plex Sans KR",
+    "FontBold": "/Assets/Fonts/Korean/SemiBold.ttf#IBM Plex Sans KR"
+  },
+
+  "PlsWait": "기다리세요",
+  "FinishedRestart": "ISN Forecast를 이용해 주셔서 감사합니다.",
+  "Finished": "이제 앱이 다시 시작됩니다.",
+
+  "Units":{
+    "celsius": "섭씨",
+    "farenheit": "화씨",
+
+    "kmh": "km/h",
+    "mph": "mph",
+
+    "mm": "밀리미터 (mm)",
+    "inch": "인치 (in)"
+  },
+  "Setup": {
+    "Welcome": "어서 오십시오!",
+
+    "Step1": "언어",
+    "Step2": "준비하기",
+    "Step3": "모습",
+    "Step4": "위치 서비스",
+    "Step5": "다른 설정",
+
+    "Language Select": "선호하는 언어를 선택하세요.",
+    "ChangeLanguageLater": "필요한 경우 나중에 언어 설정을 수정할 수 있습니다.",
+    "Recommended": "추천",
+    "OtherLang": "기타 사용 가능한 언어",
+
+    "UpdateTitle": "업데이트 확인 중...",
+    "TimeToUpdate": "업데이트를 확인할 시간입니다!",
+    "ExtraUpdateInfo": "설정에서 업데이트 빈도를 자유롭게 변경하십시오.",
+
+    "AppearanceTitle": "마음에 드는 룩을 고를 시간!",
+    "AppearanceExtra": "여기에서 외모를 수정할 수 있습니다. 그러나 사용할 수 없는 몇 가지 옵션이 있습니다.",
+    "ChooseLook": "당신의 외모를 선택.",
+    "ChooseLookWording": "모양을 선택하고 선택한 항목에 따라 버튼, 상황에 맞는 메뉴 및 배경이 어떻게 조정되는지 확인합니다.",
+    "GradientOnly": "화려한",
+    "Black": "어두운 색",
+    "White": "밝은 색",
+    "Gradient+3D": "날씨 애니메이션",
+
+    "Saving": "설정 저장 중...",
+    "IntialSaving": "모두 완료되었습니다! 이제 설정을 저장하고 있습니다!",
+    "WritingToFile": "세이브 파일에 쓰는 중...",
+
+    "Finished": "ISN Forecast에 오신 것을 환영합니다!",
+    "ThankYou": "",
+
+    "LastStepTitle": "최종 옵션",
+    "LastStepDesc": "ISN Forecast를 최대한 활용하려면 정보가 정확한지 확인해야 합니다. 그렇지 않은 경우 수정하십시오.",
+    "TimeFormat": "시간 형식",
+    "12Hour": "12-Hour",
+    "24Hour": "24-Hour",
+    "DateFormat": "날짜 형식",
+    "Country": "국가",
+    "UseEmergencyServices": "응급 서비스를 사용하도록 선택",
+    "AllowBackgroundUpdate": "백그라운드 업데이트 허용",
+    "NotRecommended": "(권장하지 않음)",
+    "tempunit": "온도 단위",
+
+    "Region": "지역",
+    "Application": "신청",
+    "Optional": "선택 과목",
+
+    "LocationCheck": "위치 확인",
+    "LocationDescription": "아래의 이 정보를 사용하여 GPS 관련 문제를 해결할 수 있습니다.",
+    "Fail": "실패한",
+    "Pass": "통과",
+    "GPSFailDesc": "Forecast에서 GPS 위치를 가져올 수 없습니다. 이것은 다양한 이유 때문일 수 있습니다.",
+    "City": "도시",
+    "Latitude": "위도",
+    "Longitude": "경도",
+    
+    "ContinueGPS": "GPS 계속 사용",
+    "ContinueIP": "IP 계속 사용",
+
+    "AreYouSure": "확실합니까?",
+    "AreYouSureDesc": "다양한 이유로 일반적인 용도로 IP 기반 위치를 사용하는 것은 권장하지 않습니다.",
+    "IncorrectLocation": "잘못된 위치가 표시될 수 있습니다.",
+    "IPmgmnt": "IP 관리 서비스는 때때로 사용하지 못할 수 있습니다.",
+
+    "ContinueAnyway": "계속(권장하지 않음)",
+    "SetLocationManually": "수동으로 위치 설정",
+    "Back": "뒤"
+  },
+  "Weather": {
+    "Prep": "준비 중...",
+    "CurrentWeather": "현재 날씨",
+    "LastUpdated": "마지막 업데이트: ",
+    "Astronomy": "천문학",
+    "Sunrise": "해돋이",
+    "Sunset": "일몰",
+    "24HrForecast": "24시간 예측",
+    "UV-Index": "자외선 지수",
+    "5DayForecast": "5일 예측",
+    "AQI": "대기질 지수",
+    "Past24": "지난 24시간 동안",
+    "WindSpeed": "바람의 속도",
+    "WindDirection": "바람의 방향",
+    "Wind": "바람",
+    "Rainfall": "강우",
+    "lang":"ko"
+  },
+  "Countries": {
+    "BE": "벨기에",
+    "벨기에": "BE",
+    "UK": "영국",
+    "영국": "UK",
+    "NL": "네덜란드",
+    "네덜란드": "NL",
+    "FR": "프랑스",
+    "프랑스": "FR",
+    "ES": "스페인",
+    "스페인": "ES"
+  },
+  "AQI": {
+    "1T": "낮은",
+    "2T": "낮은",
+    "3T": "낮은",
+    "4T": "보통의",
+    "5T": "보통의",
+    "6T": "보통의",
+    "7T": "높은",
+    "8T": "높은",
+    "9T": "높은",
+    "10T": "높은",
+    "11T": "매우 높음",
+
+    "1": "이는 위험이 거의 또는 전혀 발생하지 않습니다.",
+    "2": "이는 위험이 거의 또는 전혀 발생하지 않습니다.",
+    "3": "이는 위험이 거의 또는 전혀 발생하지 않습니다.",
+    "4": "폐 및/또는 심장 문제가 있는 성인과 어린이는 문제를 경험할 수 있습니다.",
+    "5": "폐 및/또는 심장 문제가 있는 성인과 어린이는 문제를 경험할 수 있습니다.",
+    "6": "폐 및/또는 심장 문제가 있는 성인과 어린이는 문제를 경험할 수 있습니다.",
+    "7": "눈이 아프거나 기침, 인후통이 있는 사람은 운동을 줄이는 것이 좋습니다.",
+    "8": "눈이 아프거나 기침, 인후통이 있는 사람은 운동을 줄이는 것이 좋습니다.",
+    "9": "눈이 아프거나 기침, 인후통이 있는 사람은 운동을 줄이는 것이 좋습니다.",
+    "10": "특히 기침 및/또는 인후통이 있는 경우 신체 활동을 제한하십시오."
+  },
+  "UVIndex": {
+    "1T": "낮은",
+    "2T": "낮은",
+    "3T": "낮은",
+    "4T": "보통의",
+    "5T": "보통의",
+    "6T": "보통의",
+    "7T": "높은",
+    "8T": "높은",
+    "9T": "높은",
+    "10T": "높은",
+    "11T": "매우 높음",
+
+    "1": "특별한 조치를 취하지 않아도 됩니다.",
+    "2": "특별한 조치를 취하지 않아도 됩니다.",
+    "3": "보호가 필요합니다. 자외선 차단제를 바르는 것이 좋습니다.",
+    "4": "보호가 필요합니다. 자외선 차단제를 바르는 것이 좋습니다.",
+    "5": "보호가 필요합니다. 자외선 차단제를 바르는 것이 좋습니다.",
+    "6": "보호가 필요합니다. 자외선 차단제를 바르는 것이 좋습니다.",
+    "7": "보호가 필요합니다. 자외선 차단제를 바르는 것이 좋습니다.",
+    "8": "추가 보호가 필요하므로 자외선 차단제를 바르고 한낮에 그늘을 찾는 것이 좋습니다.",
+    "9": "추가 보호가 필요하므로 자외선 차단제를 바르고 한낮에 그늘을 찾는 것이 좋습니다.",
+    "10": "추가 보호가 필요하므로 자외선 차단제를 바르고 한낮에 그늘을 찾는 것이 좋습니다.",
+    "11": "노출 방지. 굽는 시간은 10~15분입니다."
+  },
+  "AQI Name": {
+    "1": "Very low pollution",
+    "2": "Low pollution",
+    "3": "Medium pollution",
+    "4": "High pollution",
+    "5": "Very high pollution"
+  },
+  "AQI Description": {
+    "1": "This poses little to no risk.",
+    "2": "This air quality is fair. However, there may be a moderate health concern for sensitive groups.",
+    "3": "Everyone may begin to experience health effects.",
+    "4": "Everyone may experience more serious health effects.",
+    "5": "Health warnings of emergency conditions. The entire population is affected."
+  },
+  "Condition": {
+    "1": "Clear",
+    "2": "Partly Cloudy",
+    "3": "Cloudy",
+    "4": "Tornado",
+    "5": "Light Rain",
+    "6": "Mostly Clear",
+    "7": "Rain"
+  },
+  "Forecast": {
+    "Current": "현재 날씨",
+    "Settings": "설정",
+    "Search": "검색",
+    "Globe": "지구"
+  },
+  "Settings": {
+    "Settings": "설정",
+
+    "Behavior": "행동",
+    "AutoUpdates": "자동 업데이트 허용",
+    "AutoUpdatesDesc": "새 버전이 나올 때마다 PC가 Forecast를 업데이트하도록 하십시오.",
+    "Unit": "단위",
+    "UnitDesc": "예측을 표시할 방법 결정.",
+    "GPS": "GPS",
+    "GPSDesc": "활성화하면 더 정확한 위치 정보를 제공할 수 있습니다.",
+
+    "General": "일반",
+    "Region": "지역",
+    "RegionDesc": "설정한 국가는 Forecast 경험을 개인화합니다.",
+    "TimeFormat": "시간 형식",
+    "TimeFormatDesc": "상태 표시줄에 표시할 시간 형식을 선택하세요.",
+    "Speed": "속도 단위",
+    "SpeedDesc": "이에 따라 풍속 설정이 수정됩니다.",
+
+    "Appearance": "모습",
+    "Color": "주제",
+    "ColorDesc": "색 구성표를 선택하면 모든 곳에 적용됩니다..",
+
+    "AdditionalServices": "추가적인 서비스",
+    "EmergencyAlerts": "긴급 경보",
+    "EmergencyAlertsDesc": "지방 정부가 기상 경보를 발령할 때마다 알림을 받습니다. (이것은 지진 경보를 지원하지 않습니다)",
+    "EEW": "조기 지진 경보",
+    "EEWDesc": "ISN은 이 기능을 항상 활성화할 것을 권장합니다.",
+
+    "DiagCategory": "진단",
+    "Diag": "진단 모드 시작",
+    "DiagDesc": "Forecast에 문제가 있습니까? 이 메뉴를 입력하고 무슨 일이 일어나고 있는지 알아보십시오. (응용 프로그램이 다시 시작됩니다)",
+    "Reset": "모든 설정 재설정",
+    "ResetDesc": "모든 설정을 재설정합니다. 이 작업은 취소할 수 없습니다.",
+
+    "Misc": "엑스트라",
+    "Wii": "Wii 모드",
+    "WiiDesc": "시뮬레이션된 Wii 환경에서 ISN Forecast를 실행합니다."
+  },
+  "About":{
+    "About": "About",
+    "Version": "Version",
+    "Build number": "Build number",
+    "Software Update": "Software Update",
+    "NoUpdate": "No updates were found",
+    "UpdateFound": "Software update was found",
+
+    "Lang": "Language",
+    "Langcode": "Language code",
+    "Langver": "Language version"
+  },
+  "Search":{
+    "Search": "검색",
+    "InsuffChar": "부족한 문자",
+    "Type1More": "검색을 시작하려면 1자를 더 입력하십시오.",
+    "Type2More": "검색을 시작하려면 2자를 더 입력하십시오.",
+
+    "NothingHere": "여기 아직 아무것도...",
+    "NothingInstruct": "검색을 시작하려면 검색 상자 안에 내용을 입력하세요.",
+
+    "xResultsFound (Post)": "개의 결과가 검색되었습니다",
+    "xResultsFound (Pre)": ""
+  }
+}

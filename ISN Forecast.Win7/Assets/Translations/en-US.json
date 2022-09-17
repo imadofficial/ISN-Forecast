@@ -1,0 +1,247 @@
+{
+  "Metadata": {
+    "LangCode": "en_US",
+    "LangName": "English (US)",
+    "LangBuild": "17",
+    "FontNormal": "/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display",
+    "FontBold": "/Assets/Fonts/Latin-Based/SFPRODISPLAYBOLD.OTF#SF Pro Display"
+  },
+
+  "PlsWait": "Please wait...",
+  "FinishedRestart": "Thank you for using ISN Forecast.",
+  "Finished": "The program will now restart.",
+
+
+  "Units":{
+    "celsius": "Celsius",
+    "farenheit": "Fahrenheit",
+
+    "kmh": "km/h",
+    "mph": "mph",
+
+    "mm": "Millimeter (mm)",
+    "inch": "Inch (in)"
+  },
+  "Setup": {
+    "Welcome": "Welcome!",
+
+    "Step1": "Language",
+    "Step2": "Getting ready",
+    "Step3": "Appearance",
+    "Step4": "Location Services",
+    "Step5": "Other Settings",
+
+    "Language Select": "Select your preferred language.",
+    "ChangeLanguageLater": "You can modify the language settings later on if needed.",
+    "Recommended": "Recommended",
+    "OtherLang": "Other available languages",
+
+    "UpdateTitle": "Checking for updates...",
+    "TimeToUpdate": "Time to check for updates!",
+    "ExtraUpdateInfo": "Feel free to change the frequency of the updates in the settings!",
+
+    "AppearanceTitle": "Time to choose your favorite look!",
+    "AppearanceExtra": "You can modify your looks here. But there are a few options unavailable.",
+    "ChooseLook": "Choose your look.",
+    "ChooseLookWording": "Select an appearance and see how the buttons, context menus and background adjust depending on which one you choose.",
+    "GradientOnly": "Colorful",
+    "Black": "Dark",
+    "White": "Bright",
+    "Gradient+3D": "3D Weather Animations",
+
+    "Saving": "Saving...",
+    "IntialSaving": "All done! We're now saving your settings!",
+    "WritingToFile": "Writing to a save file...",
+
+    "Finished": "Welcome to ISN Forecast!",
+    "ThankYou": "",
+
+    "LastStepTitle": "The last step",
+    "LastStepDesc": "To take full advantage of ISN Forecast, we require you to confirm if the information is correct. If not please correct them.",
+    "TimeFormat": "Time Format",
+    "12Hour": "12-Hour",
+    "24Hour": "24-Hour",
+    "DateFormat": "Date Format",
+    "Country": "Country",
+    "UseEmergencyServices": "Opt in to use emergency services",
+    "AllowBackgroundUpdate": "Allow background updating",
+    "NotRecommended": "(Not recommended)",
+    "tempunit": "Unit",
+
+    "Region": "Region",
+    "Application": "Application",
+    "Optional": "Optional",
+
+    "LocationCheck": "Location Check",
+    "LocationDescription": "You can use this information below to troubleshoot any issues with the GPS.",
+    "Fail": "Failed",
+    "Pass": "Passed",
+    "GPSFailDesc": "Forecast wasn't able to get the GPS location. This could be due to a variety of reasons.",
+    "IPFail_NoInternet": "Couldn't connect to ISN to process location data.",
+    "City": "City",
+    "Latitude": "Longitude",
+    "Longitude": "Latitude",
+    "ContinueGPS": "Continue using GPS",
+    "ContinueIP": "Continue using IP",
+
+    "AreYouSure": "Are you sure?",
+    "AreYouSureDesc": "We don't recommend using IP-based location for general usage due to a veriety of reasons.",
+    "IncorrectLocation": "Incorrect location may show up.",
+    "IPmgmnt": "IP Management Service may not be available at times.",
+
+    "ContinueAnyway": "Continue Anyway (Not recommended)",
+    "SetLocationManually": "Set location manually",
+    "Back": "Go back"
+  },
+  "Weather": {
+    "Prep": "Preparing...",
+    "CurrentWeather": "Current Weather",
+    "LastUpdated": "Last Updated: ",
+    "Astronomy": "Astronomy",
+    "Sunrise": "Sunrise",
+    "Sunset": "Sunset",
+    "24HrForecast": "24-Hour Forecast",
+    "UV-Index": "UV-Index",
+    "5DayForecast": "5-Day Forecast",
+    "AQI": "Air Quality Index",
+    "Past24": "in the past 24 hours",
+    "WindSpeed": "Wind Speed",
+    "WindDirection": "Wind Direction",
+    "Wind": "Wind",
+    "Rainfall": "Rainfall",
+    "lang":"en"
+  },
+  "Countries": {
+    "BE": "Belgium",
+    "Belgium": "BE",
+    "UK": "United Kingdom",
+    "United Kingdom": "UK",
+    "NL": "Netherlands",
+    "Netherlands": "NL",
+    "FR": "France",
+    "France": "FR",
+    "ES": "Spain",
+    "Spain": "ES"
+  },
+  "UVIndex": {
+    "1T": "Low",
+    "2T": "Low",
+    "3T": "Low",
+    "4T": "Moderate",
+    "5T": "Moderate",
+    "6T": "Moderate",
+    "7T": "High",
+    "8T": "High",
+    "9T": "High",
+    "10T": "High",
+    "11T": "Very High",
+    
+    "1": "No special measures have to be taken.",
+    "2": "No special measures have to be taken.",
+    "3": "Protection required, it's recommended to wear sunscreen.",
+    "4": "Protection required, it's recommended to wear sunscreen.",
+    "5": "Protection required, it's recommended to wear sunscreen.",
+    "6": "Protection required, it's highly recommended to wear sunscreen.",
+    "7": "Protection required, it's highly recommended to wear sunscreen.",
+    "8": "Extra protection required, it's recommended to wear sunscreen and seek shade during midday hours.",
+    "9": "Extra protection required, it's recommended to wear sunscreen and seek shade during midday hours.",
+    "10": "Extra protection required, it's recommended to wear sunscreen and seek shade during midday hours.",
+    "11": "Avoid exposure. Burn time is 10-15 minutes."
+  },
+  "AQI": {
+    "1T": "Low",
+    "2T": "Low",
+    "3T": "Low",
+    "4T": "Moderate",
+    "5T": "Moderate",
+    "6T": "Moderate",
+    "7T": "High",
+    "8T": "High",
+    "9T": "High",
+    "10T": "High",
+    "11T": "Very High",
+
+    "1": "This poses little to no risk.",
+    "2": "This poses little to no risk.",
+    "3": "This poses little to no risk.",
+    "4": "Adults and children with lung and or heart problems, may experience problems.",
+    "5": "Adults and children with lung and or heart problems, may experience problems.",
+    "6": "Adults and children with lung and or heart problems, may experience problems.",
+    "7": "Those who suffer from sore eyes, cough or sore throat should consider exercising less.",
+    "8": "Those who suffer from sore eyes, cough or sore throat should consider exercising less.",
+    "9": "Those who suffer from sore eyes, cough or sore throat should consider exercising less.",
+    "10": "Limit physical activity, especially outdoors, especially if you have a cough and/or sore throat."
+  },
+  "Condition": {
+    "1": "Clear",
+    "2": "Partly Cloudy",
+    "3": "Cloudy",
+    "4": "Tornado",
+    "5": "Light Rain",
+    "6": "Mostly Clear",
+    "7": "Rain"
+  },
+  "Settings": {
+    "Settings": "Settings",
+
+    "Behavior": "Behavior",
+    "AutoUpdates": "Allow automatic updates",
+    "AutoUpdatesDesc": "Let your PC update Forecast whenever a new version comes out.",
+    "Unit": "Unit",
+    "UnitDesc": "Determine how you would like to display your forecast.",
+    "GPS": "GPS",
+    "GPSDesc": "If enabled, this could provide more accurate location information.",
+
+    "General": "General",
+    "Region": "Region",
+    "RegionDesc": "The country you set personalizes your experience with Forecast.",
+    "TimeFormat": "Time format",
+    "TimeFormatDesc": "Select the time format you want to see displayed in your statusbar.",
+    "Speed": "Speed unit",
+    "SpeedDesc": "This will modify your wind speed settings accordingly.",
+
+    "Appearance": "Appearance",
+    "Color": "Color",
+    "ColorDesc": "Select your color mode and it will get applied everywhere.",
+
+    "AdditionalServices": "Additional Services",
+    "EmergencyAlerts": "Emergency Alerts",
+    "EmergencyAlertsDesc": "Be notified whenever your local government issues a weather warning. (This does NOT support earthquake alerts)",
+    "EEW": "Early Earthquake Warning",
+    "EEWDesc": "ISN recommends having this enabled at all times.",
+
+    "DiagCategory": "Diagnostics",
+    "Diag": "Enter Diagnostics Mode",
+    "DiagDesc": "Having issues with Forecast? Enter this menu and find out what's going on. (The application will be restarted)",
+    "Reset": "Reset ALL settings",
+    "ResetDesc": "Reset all settings. This action CANNOT be undone.",
+
+    "Misc": "Miscellaneous",
+    "Wii": "Wii Mode",
+    "WiiDesc": "Run ISN Forecast in a simulated Wii environment."
+  },
+  "About":{
+    "About": "About",
+    "Version": "Version",
+    "Build number": "Build number",
+    "Software Update": "Software Update",
+    "NoUpdate": "No updates were found",
+    "UpdateFound": "Software update was found",
+
+    "Lang": "Language",
+    "Langcode": "Language code",
+    "Langver": "Language version"
+  },
+  "Search":{
+    "Search": "Search",
+    "InsuffChar": "Insufficient characters",
+    "Type1More": "Type 1 more character to start your search.",
+    "Type2More": "Type 2 more characters to start your search.",
+
+    "NothingHere": "Nothing here yet...",
+    "NothingInstruct": "Type something inside the searchbox to start searching.",
+
+    "xResultsFound (Post)": "results were found",
+    "xResultsFound (Pre)": ""
+  }
+}
