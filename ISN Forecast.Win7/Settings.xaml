@@ -5,64 +5,139 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ISN_Forecast.Win7"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1200" d:DesignWidth="800"
       Title="Settings">
 
     <Grid>
+        
+            
+        
+        <ScrollViewer VerticalScrollBarVisibility="Visible">
+            <StackPanel Margin="0,0,0,0">
+                <TextBlock Foreground="White" x:Name="Status" Text="Behavior" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,10,0,0"/>
+
+                <Border x:Name="AutomaticUpdates" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="UpdatesTitle" FontSize="18" Text="Allow automatic updates" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="UpdatesDescription" TextWrapping="Wrap" FontSize="14" Text="Let your PC update Forecast whenever a new version comes out." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <CheckBox VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="UpdatesBox" Margin="0,-35,-80,0" FontSize="12" Foreground="White" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display"/>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="UnitSetting" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="UnitTitle" FontSize="18" Text="Unit" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="UnitDescription" TextWrapping="Wrap" FontSize="14" Text="Determine how you would like to display your forecast." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <ComboBox VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="UnitSelection" Margin="0,-35,20,0"/>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="GPSSetting" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="GPSTitle" FontSize="18" Text="GPS" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="GPSDescription" TextWrapping="Wrap" FontSize="14" Text="If enabled, this could provide more accurate location information." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <CheckBox VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="GPSBox" Margin="0,-35,-80,0" FontSize="12" Foreground="White" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display"/>
+                    </StackPanel>
+                </Border>
+
+                <TextBlock Foreground="White" x:Name="RegionAndGeography" Text="General" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,10,0,0"/>
+                <Border x:Name="Region" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="RegionTitle" FontSize="18" Text="Region" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="RegionDescription" TextWrapping="Wrap" FontSize="14" Text="The country you set personalizes your experience with Forecast." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <ComboBox VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="RegionSelection" Margin="0,-35,20,0"/>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="Time" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="TimeTitle" FontSize="18" Text="Time format" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="TimeDescription" TextWrapping="Wrap" FontSize="14" Text="Select the time format you want to see displayed in your statusbar." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <ComboBox VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="TimeSelection" Margin="0,-35,20,0"/>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="Speeds" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="SpeedTitle" FontSize="18" Text="Speed" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="SpeedDescription" TextWrapping="Wrap" FontSize="14" Text="This will modify your wind speed settings accordingly." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <ComboBox VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="SpeedSelection" Margin="0,-35,20,0"/>
+                    </StackPanel>
+                </Border>
+
+                <TextBlock Foreground="White" x:Name="Appearance" Text="Appearance" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,10,0,0"/>
+                <Border x:Name="AccentColor" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="AccentColorTitle" FontSize="18" Text="Color settings" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="AccentColorDescription" TextWrapping="Wrap" FontSize="14" Text="Select your color mode and it will get applied everywhere." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <ComboBox VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="ColorPicker" Margin="0,-35,20,0"/>
+                    </StackPanel>
+                </Border>
+
+                <TextBlock Foreground="White" x:Name="Additional" Text="Additional Services" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,10,0,0"/>
+                <Border x:Name="EAS" Opacity="1" Height="Auto" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="EASTitle" FontSize="18" Text="Emergency Alerts" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="EASDescription" TextWrapping="Wrap" FontSize="14" Text="Be notified whenever your local government issues a warning. (This does NOT support earthquake alerts)" Margin="20,0,30,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock FontSize="8" Text=""/>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="EEW" Opacity="0.60" Height="Auto" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="EEWTitle" FontSize="18" Text="Early Earthquake Warning" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="EEWDescription" TextWrapping="Wrap" FontSize="14" Text="ISN recommends having this enabled at all times." Margin="20,0,30,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock FontSize="8" Text=""/>
+                    </StackPanel>
+                </Border>
+
+                <TextBlock Foreground="White" x:Name="Troubleshoot" Text="Diagnostics" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,10,0,0"/>
+                <Border x:Name="ConnectionTest" Opacity="1" Height="Auto" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="ConnectTitle" FontSize="18" Text="Enter Diagnostics mode" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="ConnectDescription" TextWrapping="Wrap" FontSize="14" Text="Having issues with Forecast? Enter this menu and find out what's going on. (The application will be restarted)" Margin="20,0,30,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="EnterSign1" TextWrapping="Wrap" FontSize="28" Text=">" Margin="0,-60,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Button Height="50" Width="8000" Click="ConnectTest" Opacity="0" Margin="0,-43,0,0" />
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="Reset" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#422424" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="ResetTitle" FontSize="18" Text="Reset ALL settings" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="ResetDescription" TextWrapping="Wrap" FontSize="14" Text="Reset all settings. This action CANNOT be undone." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="EnterSign2" TextWrapping="Wrap" FontSize="28" Text=">" Margin="0,-40,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Button Height="60" Width="8000" Click="ConnectTest" Opacity="0" Margin="0,-43,0,0" />
+                    </StackPanel>
+                </Border>
+
+                <TextBlock Foreground="White" x:Name="WiiMODE" Text="Miscellaneous" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,10,0,0"/>
+                <Border x:Name="WiiMode" Opacity="1" Height="Auto" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="WiiTitle" FontSize="18" Text="Wii Mode (Coming soon)" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="WiiDescription" TextWrapping="Wrap" FontSize="14" Text="Run ISN Forecast in a simulated Wii environment." Margin="20,0,30,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="Wii" TextWrapping="Wrap" FontSize="28" Text=">" Margin="0,-40,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <Button Height="50" Width="8000" IsEnabled="False" Opacity="0" Margin="0,-43,0,0" />
+                    </StackPanel>
+                </Border>
+
+                <Border Opacity="0" Height="50" Width="Auto" Margin="100,5,100,0" Background="#422424" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" FontSize="18" Text="Reset ALL settings" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" TextWrapping="Wrap" FontSize="14" Text="Reset all settings. This action CANNOT be undone." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" TextWrapping="Wrap" FontSize="28" Text=">" Margin="0,-40,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+
         <Button Click="Close_Click" IsEnabled="True" x:Name="Close" Opacity="1" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="30,10,0,0">
             <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/FirstSetup/Back.png"/>
         </Button>
 
+        <Button IsEnabled="True" Click="Save_Click" x:Name="Save" Opacity="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" Height="50" Width="50"  Margin="0,10,30,0">
+            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/Assets/Icons/Light/Save.png"/>
+        </Button>
 
-        <StackPanel Margin="0,0,0,0">
-            <TextBlock Foreground="White" x:Name="Status" Text="Behavior" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,10,0,0"/>
-
-            <Border x:Name="MemeSongs" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
-                <StackPanel>
-                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="MemeSongsTitle" FontSize="18" Text="Meme songs" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="MemeDescription" TextWrapping="Wrap" FontSize="14" Text="Let Forecast play various songs in the background depending on the time of the year." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <CheckBox VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-35,-80,0" FontSize="12" Foreground="White" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display"/>
-                </StackPanel>
-            </Border>
-
-            <Border x:Name="AutomaticUpdates" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
-                <StackPanel>
-                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="UpdatesTitle" FontSize="18" Text="Allow automatic updates" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="UpdatesDescription" TextWrapping="Wrap" FontSize="14" Text="Let your PC update Forecast whenever a new version comes out." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <CheckBox VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-35,-80,0" FontSize="12" Foreground="White" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display"/>
-                </StackPanel>
-            </Border>
-
-            <TextBlock Foreground="White" x:Name="Appearance" Text="Appearance" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,10,0,0"/>
-            <Border x:Name="AccentColor" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
-                <StackPanel>
-                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="AccentColorTitle" FontSize="18" Text="Color settings" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="AccentColorDescription" TextWrapping="Wrap" FontSize="14" Text="Select your color mode and it will get applied everywhere." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <ComboBox VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="ColorPicker" Margin="0,-35,20,0">
-                        <ComboBoxItem IsSelected="True">Colorful</ComboBoxItem>
-                        <ComboBoxItem>Black and white</ComboBoxItem>
-                    </ComboBox>
-                </StackPanel>
-            </Border>
-
-            <TextBlock Foreground="White" x:Name="Troubleshoot" Text="Diagnostics" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,10,0,0"/>
-            <Border x:Name="ConnectionTest" Opacity="1" Height="Auto" Width="Auto" Margin="100,5,100,0" Background="#303030" CornerRadius="10">
-                <StackPanel>
-                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="ConnectTitle" FontSize="18" Text="Enter Diagnostics mode" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="ConnectDescription" TextWrapping="Wrap" FontSize="14" Text="Having issues with Forecast? Enter this menu and find out what's going on. (The application will be restarted)" Margin="20,0,30,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="EnterSign1" TextWrapping="Wrap" FontSize="28" Text=">" Margin="0,-60,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                    <Button Height="50" Width="8000" Click="ConnectTest" Opacity="0" Margin="0,-43,0,0" />
-                </StackPanel>
-            </Border>
-
-            <Border x:Name="Reset" Opacity="1" Height="50" Width="Auto" Margin="100,5,100,0" Background="#422424" CornerRadius="10">
-                <StackPanel>
-                    <TextBlock Opacity="1" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="ResetTitle" FontSize="18" Text="Reset ALL settings" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="ResetDescription" TextWrapping="Wrap" FontSize="14" Text="Reset all settings. This action CANNOT be undone." Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <TextBlock Opacity="0.75" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="EnterSign2" TextWrapping="Wrap" FontSize="28" Text=">" Margin="0,-40,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                    <Button Height="60" Width="8000" Click="ConnectTest" Opacity="0" Margin="0,-43,0,0" />
-                </StackPanel>
-            </Border>
-        </StackPanel>
+        <TextBlock Opacity="0" FontFamily="/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White" x:Name="SavedText" FontSize="18" Text="Saved!" Margin="0,60,30,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
     </Grid>
 </Page>

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ISN_Forecast.Win7"
       mc:Ignorable="d" 
-      d:DesignHeight="70" d:DesignWidth="900"
+      d:DesignHeight="100" d:DesignWidth="900"
       Title="Statusbar"
       xmlns:ui="http://schemas.modernwpf.com/2019">
 
@@ -18,29 +18,26 @@
             <Image Source="Assets/Icons/Taal.png" RenderOptions.BitmapScalingMode="HighQuality" Width="30" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" RenderOptions.EdgeMode="Aliased"></Image>
         </Button>
 
-        <TextBlock x:Name="Time" Text="4:20 AM" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,30,0" FontSize="28" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White">
-            <TextBlock.Effect>
-                <DropShadowEffect
-      ShadowDepth="1"
-      Direction="0"
-      Color="Black"
-      Opacity="1"
-     BlurRadius="45"/>
-            </TextBlock.Effect>
-        </TextBlock>
-        
-        <TextBlock x:Name="Date" Text="02/16/2022"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,30,25" FontSize="28" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White">
-            <TextBlock.Effect>
-                <DropShadowEffect
-      ShadowDepth="1"
-      Direction="0"
-      Color="Black"
-      Opacity="1"
-     BlurRadius="45"/>
-            </TextBlock.Effect>
-        </TextBlock>
+        <Button Name="Settings" Margin="0,-15,320,0" HorizontalAlignment="Right" Width="50" Height="50" Click="Settings_Click">
+            <Image Source="Assets/Icons/Light/Settings.png" RenderOptions.BitmapScalingMode="HighQuality" Width="30" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" RenderOptions.EdgeMode="Aliased"></Image>
+        </Button>
+
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Image x:Name="GPSUsage" Opacity="0" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="HighQuality" Source="/Assets/Icons/Light/GPS.png" Margin="0,-55,10,0" Height="20" Width="20"/>
+            <TextBlock x:Name="Time" Text="4:20 AM" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,30,0" FontSize="28" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White"/>
+
+
+        </StackPanel>
+
+
+        <TextBlock x:Name="Date" Text="02/16/2022"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,30,25" FontSize="28" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" Foreground="White"/>
         <DockPanel x:Name="LeftDocked" Margin="30,5,20,0" VerticalAlignment="Top" HorizontalAlignment="Left">
-            <TextBlock Foreground="White" x:Name="Status" Text="Preparing..." FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="42" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,5,0,0">
+            <Button Click="Cities_Click"  Name="Cities" Margin="0,6,10,0" HorizontalAlignment="Right" Width="50" Height="50">
+                <Image Source="Assets/Icons/Light/Hamburger Menu.png" RenderOptions.BitmapScalingMode="HighQuality" Width="30" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" RenderOptions.EdgeMode="Aliased"></Image>
+            </Button>
+
+            <TextBlock Foreground="White" x:Name="Status" Text="Preparing..." FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="42" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,5,0,0">
                 <TextBlock.Effect>
                     <DropShadowEffect
       ShadowDepth="1"
@@ -51,15 +48,22 @@
                 </TextBlock.Effect>
             </TextBlock>
 
-            <TextBlock Foreground="White" x:Name="ActualPos" Text="" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="42" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,5,0,0"/>
 
-            <Button Click="Refresh_Click"  Name="Refresh" Margin="20,6,10,0" HorizontalAlignment="Right" Width="50" Height="50">
-                <Image Source="Assets/Icons/Light/Refresh.png" RenderOptions.BitmapScalingMode="HighQuality" Width="30" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" RenderOptions.EdgeMode="Aliased"></Image>
-            </Button>
 
-            <Button Name="Settings" Margin="00,5,10,0" Click="Settings_Click" HorizontalAlignment="Right" Width="50" Height="50">
-                <Image Source="Assets/Icons/Light/Settings.png" RenderOptions.BitmapScalingMode="HighQuality" Width="30" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" RenderOptions.EdgeMode="Aliased"></Image>
-            </Button>
+            <Border Opacity="0" x:Name="MusicBox" HorizontalAlignment="Right" Width="200" Height="55" Background="#303134" Margin="20,0,0,0" CornerRadius="14">
+                <StackPanel VerticalAlignment="Center" Margin="0,0,0,0">
+                    <StackPanel x:Name="MusicControls" VerticalAlignment="Top" Margin="0,0,50,0">
+                        <TextBlock Foreground="White" x:Name="SongTitle" Text="Shop" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="21" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,0"/>
+                        <TextBlock Foreground="White" x:Name="SongArtist" Text="Pigeon Games" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,0"/>
+                        <Button x:Name="Music" Click="Music_Click" Opacity="0" Height="50" Width="150" Margin="0,-50,0,0"/>
+                    </StackPanel>
+
+                    <Button Name="PauzeMusic" Margin="0,-48,10,0" HorizontalAlignment="Right" Width="40" Height="40">
+                        <Image Source="Assets/Icons/Light/Pauze.png" RenderOptions.BitmapScalingMode="HighQuality" Width="25" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" RenderOptions.EdgeMode="Aliased"></Image>
+                    </Button>
+                </StackPanel>
+            </Border>
+
         </DockPanel>
     </Grid>
 </Page>
