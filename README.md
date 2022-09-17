@@ -1,4 +1,4 @@
-# ISN Forecast Channel
+# ISN Forecast
 
 The actively maintained application & reliable weather application.
 
