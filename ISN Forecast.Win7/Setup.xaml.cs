@@ -28,6 +28,11 @@ namespace ISN_Forecast.Win7
         public Setup()
         {
             InitializeComponent();
+            //Statusbar.Instance.Settings.Opacity = 0; Statusbar.Instance.Settings.IsEnabled = false;
+            Statusbar.Instance.Globe.Opacity = 0; Statusbar.Instance.Globe.IsEnabled = false;
+            Statusbar.Instance.Search.Opacity = 0; Statusbar.Instance.Search.IsEnabled = false;
+
+            MainWindow.Instance.MainContents.Width = Double.NaN;
             Instance = this;
             MainContent.Content = new Language();
         }
@@ -47,7 +52,6 @@ namespace ISN_Forecast.Win7
                     SolidColorBrush BoxTextColor = new SolidColorBrush(Colors.Black);
 
                     Status.Foreground = TextColor;
-                    Extra.Foreground = TextColor;
                     Step1.Fill = TextColor;
                     Step2.Fill = TextColor;
                     Step3.Fill = TextColor;
@@ -56,15 +60,13 @@ namespace ISN_Forecast.Win7
                     Statusbar.Instance.Status.Foreground = TextColor;
                     Statusbar.Instance.Time.Foreground = TextColor;
                     Statusbar.Instance.Date.Foreground = TextColor;
-                    LineTop.Background = TextColor;
-                    LineBottom.Background = TextColor;
 
                     Appearance.Instance.Title.Foreground = TextColor;
-                    Appearance.Instance.BackAndWhite.Foreground = BoxColor;
-                    Appearance.Instance.GradOnly.Foreground = BoxColor;
+                    //Appearance.Instance.BackAndWhite.Foreground = BoxColor;
+                    //Appearance.Instance.GradOnly.Foreground = BoxColor;
 
-                    Appearance.Instance.BackAndWhite.Background = BoxTextColor;
-                    Appearance.Instance.GradOnly.Background = BoxTextColor;
+                    //Appearance.Instance.BackAndWhite.Background = BoxTextColor;
+                    //Appearance.Instance.GradOnly.Background = BoxTextColor;
                 }
                 else //Dark mode
                 {
@@ -77,7 +79,6 @@ namespace ISN_Forecast.Win7
                     SolidColorBrush BoxTextColor = new SolidColorBrush(Colors.White);
 
                     Status.Foreground = TextColor;
-                    Extra.Foreground = TextColor;
                     Step1.Fill = TextColor;
                     Step2.Fill = TextColor;
                     Step3.Fill = TextColor;
@@ -86,15 +87,13 @@ namespace ISN_Forecast.Win7
                     Statusbar.Instance.Status.Foreground = TextColor;
                     Statusbar.Instance.Time.Foreground = TextColor;
                     Statusbar.Instance.Date.Foreground = TextColor;
-                    LineTop.Background = TextColor;
-                    LineBottom.Background = TextColor;
 
                     Appearance.Instance.Title.Foreground = TextColor;
-                    Appearance.Instance.BackAndWhite.Foreground = BoxColor;
-                    Appearance.Instance.GradOnly.Foreground = BoxColor;
+                    //Appearance.Instance.BackAndWhite.Foreground = BoxColor;
+                    //Appearance.Instance.GradOnly.Foreground = BoxColor;
 
-                    Appearance.Instance.BackAndWhite.Background = BoxTextColor;
-                    Appearance.Instance.GradOnly.Background = BoxTextColor;
+                    //Appearance.Instance.BackAndWhite.Background = BoxTextColor;
+                    //Appearance.Instance.GradOnly.Background = BoxTextColor;
                 }
             }
 

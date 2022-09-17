@@ -10,34 +10,22 @@
       Title="Setup">
 
     <Grid>
-        <ui:ToggleSwitch x:Name="DarkMode" IsEnabled="False" Toggled="DarkMode_Toggled" Opacity="0" OffContent="Dark mode" HorizontalAlignment="Right" Margin="0,0,20,0" VerticalAlignment="Top" Foreground="White"/>
+        <ui:ToggleSwitch x:Name="DarkMode" IsEnabled="False" Toggled="DarkMode_Toggled" Opacity="0" OffContent="Light Mode" HorizontalAlignment="Right" Margin="0,0,20,0" VerticalAlignment="Top" Foreground="White"/>
         
-        <TextBlock Foreground="White" x:Name="Status" Text="Select your preferred language." FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="70,0,0,0" />
-        <Image RenderOptions.BitmapScalingMode="HighQuality" Height="30" Width="30" Margin="30,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Source="Assets/Icons/Taal.png"/>
+        <TextBlock Foreground="White" x:Name="Status" Text="Language" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,0" />
+        <TextBlock Foreground="White" x:Name="Status2" Text="Checking for updates" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" Opacity="0.5" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,-1000,0" />
+        <TextBlock Foreground="White" x:Name="Status3" Text="Appearance" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" Opacity="0.5" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,-2000,0" />
+        <TextBlock Foreground="White" x:Name="Status4" Text="Location Services" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" Opacity="0.5" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,-3000,0" />
+        <TextBlock Foreground="White" x:Name="Status5" Text="Last Step" FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="24" Opacity="0.5" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,-4000,0" />
 
-        <Border x:Name="LineTop" Width="Auto" Background="White" Opacity="0.75" VerticalAlignment="Top" Margin="0,30,0,0" RenderTransformOrigin="0,0.5" Height="1">
-            <Border.RenderTransform>
-                <RotateTransform Angle="0"/>
-            </Border.RenderTransform>
-        </Border>
+        <Frame x:Name="MainContent" Margin="30,30,30,0" NavigationUIVisibility="Hidden"/>
 
-        <Frame x:Name="MainContent" Margin="30,30,30,100" NavigationUIVisibility="Hidden"/>
-
-        <Border x:Name="LineBottom" Width="Auto" Background="White" Opacity="0.75" VerticalAlignment="Bottom" Margin="0,0,0,100" RenderTransformOrigin="0,0.5" Height="1">
-            <Border.RenderTransform>
-                <RotateTransform Angle="0"/>
-            </Border.RenderTransform>
-        </Border>
-
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" x:Name="Progress" >
-            <Ellipse Name="Step1" Width="7" Height="7" Fill="White" Canvas.Left="135" Canvas.Top="25" Margin="0,0,5,80"/>
-            <Ellipse Name="Step2" Width="7" Height="7" Fill="White" Canvas.Left="135" Canvas.Top="25" Margin="0,0,5,80" Opacity="0.5"/>
-            <Ellipse Name="Step3" Width="7" Height="7" Fill="White" Canvas.Left="135" Canvas.Top="25" Margin="0,0,5,80" Opacity="0.5"/>
-            <Ellipse Name="Step4" Width="7" Height="7" Fill="White" Canvas.Left="135" Canvas.Top="25" Margin="0,0,5,80" Opacity="0.5"/>
-            <Ellipse Name="Step5" Width="7" Height="7" Fill="White" Canvas.Left="135" Canvas.Top="25" Margin="0,0,0,80" Opacity="0.5"/>
+        <StackPanel Margin="0,0,0,30" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" x:Name="Progress" >
+            <Ellipse Name="Step1" Width="7" Height="7" Fill="White" Canvas.Left="135" Canvas.Top="25" Margin="0,0,5,0"/>
+            <Ellipse Name="Step2" Width="7" Height="7" Fill="White" Canvas.Left="135" Canvas.Top="25" Margin="0,0,5,0" Opacity="0.5"/>
+            <Ellipse Name="Step3" Width="7" Height="7" Fill="White" Canvas.Left="135" Canvas.Top="25" Margin="0,0,5,0" Opacity="0.5"/>
+            <Ellipse Name="Step4" Width="7" Height="7" Fill="White" Canvas.Left="135" Canvas.Top="25" Margin="0,0,5,0" Opacity="0.5"/>
+            <Ellipse Name="Step5" Width="7" Height="7" Fill="White" Canvas.Left="135" Canvas.Top="25" Margin="0,0,0,0" Opacity="0.5"/>
         </StackPanel>
-
-        <TextBlock Foreground="White" x:Name="Extra" Text="You can modify the language settings later on if needed." FontFamily="Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display" FontSize="18" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,55" />
-
     </Grid>
 </Page>

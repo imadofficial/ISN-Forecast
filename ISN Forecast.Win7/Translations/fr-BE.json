@@ -1,0 +1,258 @@
+{
+  "Metadata": {
+    "LangCode": "fr_BE",
+    "LangName": "France (Belgique)",
+    "LangBuild": "9",
+    "FontNormal": "/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display",
+    "FontBold": "/Assets/Fonts/Latin-Based/SFPRODISPLAYBOLD.OTF#SF Pro Display"
+  },
+
+  "PlsWait": "Veuillez patienter...",
+  "FinishedRestart": "Merci d'utiliser ISN Forecast.",
+  "Finished": "L'application va maintenant redémarrer.",
+
+  "Units":{
+    "celsius": "Celsius",
+    "farenheit": "Fahrenheit",
+
+    "kmh": "km/h",
+    "mph": "mph",
+
+    "mm": "Millimètre (mm)",
+    "inch": "Pouces (in)"
+  },
+  "Setup": {
+    "Welcome": "Bienvenue!",
+
+    "Step1": "Langue",
+    "Step2": "Préparer",
+    "Step3": "Apparence",
+    "Step4": "Services de localisation",
+    "Step5": "Autres paramètres",
+
+    "Language Select": "Sélectionnez votre langue préférée.",
+    "ChangeLanguageLater": "Vous pouvez modifier les paramètres linguistiques ultérieurement, si nécessaire.",
+    "Recommended": "Recommandé",
+    "OtherLang": "Autres langues disponibles",
+
+    "UpdateTitle": "Vérifier les mises à jour...",
+    "TimeToUpdate": "Il est temps de vérifier les mises à jour!",
+    "ExtraUpdateInfo": "N'hésitez pas à modifier la fréquence des mises à jour dans les paramètres.!",
+
+    "AppearanceTitle": "Il est temps de choisir votre look préféré!",
+    "AppearanceExtra": "You can modify your looks here. But there are a few options unavailable.",
+    "ChooseLook": "Choisissez votre style",
+    "ChooseLookWording": "Sélectionnez une apparence et voyez comment les boutons, les menus contextuels et l'arrière-plan s'adaptent en fonction de celle que vous choisissez.",
+    "GradientOnly": "Colorée",
+    "Black": "Sombre",
+    "White": "Lumineux",
+    "Gradient+3D": "Animations Météorologiques",
+
+    "Saving": "Saving...",
+    "IntialSaving": "All done! We're now saving your settings!",
+    "WritingToFile": "Writing to a save file...",
+
+    "Finished": "Bienvenue sur ISN Forecast!",
+    "ThankYou": "",
+
+    "LastStepTitle": "La dernière étape",
+    "LastStepDesc": "Pour profiter pleinement d'ISN Forecast, nous vous demandons de confirmer si les informations sont correctes. Si ce n'est pas le cas, veuillez les corriger.",
+    "TimeFormat": "Format de l'heure",
+    "12Hour": "Temps de 12 heures",
+    "24Hour": "Temps de 24 heures",
+    "DateFormat": "Format de la date",
+    "Country": "Pays",
+    "UseEmergencyServices": "Utiliser les services d'urgence",
+    "AllowBackgroundUpdate": "Autoriser la mise à jour en arrière-plan",
+    "NotRecommended": "(Non recommandé)",
+    "tempunit": "Unité",
+    
+    "Region": "Région",
+    "Application": "Application",
+    "Optional": "Optionnel",
+
+    "LocationCheck": "Vérification de la localisation",
+    "LocationDescription": "Vous pouvez utiliser les informations ci-dessous pour résoudre tout problème lié au capteur GPS.",
+    "Fail": "Échoué",
+    "Pass": "Passé",
+    "GPSFailDesc": "Forecast n'a pas pu obtenir la localisation GPS. Cela peut être dû à plusieurs raisons.",
+    "City": "Ville",
+    "Latitude": "Longitude",
+    "Longitude": "Latitude",
+    "ContinueGPS": "Poursuivre avec le GPS",
+    "ContinueIP": "Poursuivre avec l'IP",
+
+    "AreYouSure": "Etes-vous sûr de cette décision?",
+    "AreYouSureDesc": "L'utilisation d'une localisation basée sur l'IP n'est pas recommandée pour un usage général pour une multitude de raisons.",
+    "IncorrectLocation": "Un lieu incorrect peut apparaître.",
+    "IPmgmnt": "Le service de gestion IP peut ne pas être disponible à certains moments.",
+
+    "ContinueAnyway": "Continuer quand même",
+    "SetLocationManually": "Définir l'emplacement manuellement",
+    "Back": "Retour"
+  },
+  "Weather": {
+    "Prep": "Préparer...",
+    "CurrentWeather": "Météo actuelle",
+    "LastUpdated": "Dernière mise à jour: ",
+    "Astronomy": "Astronomie",
+    "Sunrise": "Lever du soleil",
+    "Sunset": "Coucher de soleil",
+    "24HrForecast": "Prévisions sur 24 heures",
+    "UV-Index": "Indice UV",
+    "5DayForecast": "Prévisions à 5 jours",
+    "AQI": "Indice de qualité de l'air",
+    "Past24": "au cours des dernières 24 heures",
+    "WindSpeed": "Vitesse du vent",
+    "WindDirection": "Direction du vent",
+    "Wind": "Vent",
+    "Rainfall": "Pluie",
+    "lang":"fr"
+  },
+  "Countries": {
+    "BE": "Belgium", "Belgium": "BE",
+    "UK": "United Kingdom", "United Kingdom": "UK",
+    "NL": "Netherlands", "Netherlands": "NL",
+    "FR": "France", "France": "FR",
+    "ES": "Spain", "Spain": "ES"
+  },
+  "UVIndex": {
+    "1T": "Faible",
+    "2T": "Faible",
+    "3T": "Faible",
+    "4T": "Modéré",
+    "5T": "Modéré",
+    "6T": "Modéré",
+    "7T": "Élevé",
+    "8T": "Élevé",
+    "9T": "Élevé",
+    "10T": "High",
+    "11T": "Very High",
+    
+    "1": "Aucune mesure particulière ne doit être prise.",
+    "2": "Aucune mesure particulière ne doit être prise.",
+    "3": "Protection requise, il est recommandé de porter un écran solaire.",
+    "4": "Protection requise, il est recommandé de porter un écran solaire.",
+    "5": "Protection requise, il est recommandé de porter un écran solaire.",
+    "6": "Protection requise, il est fortement recommandé de porter de la crème solaire.",
+    "7": "Protection requise, il est fortement recommandé de porter de la crème solaire.",
+    "8": "Une protection supplémentaire est nécessaire, il est recommandé de porter une crème solaire et de se mettre à l'ombre pendant la journée.",
+    "9": "Une protection supplémentaire est nécessaire, il est recommandé de porter une crème solaire et de se mettre à l'ombre pendant la journée.",
+    "10": "Une protection supplémentaire est nécessaire, il est recommandé de porter une crème solaire et de se mettre à l'ombre pendant la journée.",
+    "11": "Évitez l'exposition. Le temps de combustion est de 10 à 15 minutes."
+  },
+  "AQI": {
+    "1T": "Faible",
+    "2T": "Faible",
+    "3T": "Faible",
+    "4T": "Modéré",
+    "5T": "Modéré",
+    "6T": "Modéré",
+    "7T": "Élevé",
+    "8T": "Élevé",
+    "9T": "Élevé",
+    "10T": "Élevé",
+    "11T": "Très élevé",
+
+    "1": "Cela ne présente que peu ou pas de risques.",
+    "2": "Cela ne présente que peu ou pas de risques.",
+    "3": "Cela ne présente que peu ou pas de risques.",
+    "4": "Les adultes et les enfants souffrant de problèmes pulmonaires ou cardiaques peuvent rencontrer des difficultés.",
+    "5": "Les adultes et les enfants souffrant de problèmes pulmonaires ou cardiaques peuvent rencontrer des difficultés.",
+    "6": "Les adultes et les enfants souffrant de problèmes pulmonaires ou cardiaques peuvent rencontrer des difficultés.",
+    "7": "Les personnes qui souffrent de maux d'yeux, de toux ou de maux de gorge devraient envisager de faire moins d'exercice..",
+    "8": "Les personnes qui souffrent de maux d'yeux, de toux ou de maux de gorge devraient envisager de faire moins d'exercice..",
+    "9": "Les personnes qui souffrent de maux d'yeux, de toux ou de maux de gorge devraient envisager de faire moins d'exercice..",
+    "10": "Limitez l'activité physique, surtout à l'extérieur, surtout si vous avez une toux et/ou un mal de gorge."
+  },
+  "AQI Name": {
+    "1": "Very low pollution",
+    "2": "Low pollution",
+    "3": "Medium pollution",
+    "4": "High pollution",
+    "5": "Very high pollution"
+  },
+  "AQI Description": {
+    "1": "This poses little to no risk.",
+    "2": "This air quality is fair. However, there may be a moderate health concern for sensitive groups.",
+    "3": "Everyone may begin to experience health effects.",
+    "4": "Everyone may experience more serious health effects.",
+    "5": "Health warnings of emergency conditions. The entire population is affected."
+  },
+  "Condition": {
+    "1": "Clear",
+    "2": "Partly Cloudy",
+    "3": "Cloudy",
+    "4": "Tornado",
+    "5": "Light Rain",
+    "6": "Mostly Clear",
+    "7": "Rain"
+  },
+  "Forecast": {
+    "Current": "Météo",
+    "Settings": "Paramètres",
+    "Search": "Recherche",
+    "Globe": "Le monde"
+  },
+  "Settings": {
+    "Behavior": "Comportement",
+    "AutoUpdates": "Autoriser les mises à jour automatiques",
+    "AutoUpdatesDesc": "Laissez votre PC mettre à jour Forecast à chaque fois qu'une nouvelle version sort.",
+    "Unit": "Unité",
+    "UnitDesc": "Déterminez comment vous souhaitez afficher vos prévisions..",
+    "GPS": "GPS",
+    "GPSDesc": "Si cette fonction est activée, elle peut fournir des informations plus précises sur la localisation.",
+
+    "General": "Général",
+    "Region": "Région",
+    "RegionDesc": "Le pays que vous définissez personnalise votre expérience avec Forecast.",
+    "TimeFormat": "Format du temps",
+    "TimeFormatDesc": "Sélectionnez le format d'affichage de l'heure que vous souhaitez voir apparaître dans votre barre d'état.",
+    "Speed": "Unité de vitesse",
+    "SpeedDesc": "Cela modifiera vos paramètres de vitesse du vent en conséquence.",
+
+    "Appearance": "Apparition",
+    "Color": "Couleur",
+    "ColorDesc": "Sélectionnez votre mode de couleur et il sera appliqué partout.",
+
+    "AdditionalServices": "Services supplémentaires",
+    "EmergencyAlerts": "Alertes d'urgence",
+    "EmergencyAlertsDesc": "Soyez informé lorsque votre gouvernement local émet une alerte météorologique. (Ceci ne prend pas en charge les alertes de tremblement de terre)",
+    "EEW": "Alerte précoce aux tremblements de terre",
+    "EEWDesc": "ISN recommande de l'activer à tout moment.",
+
+    "DiagCategory": "Diagnostique",
+    "Diag": "Entrer en mode diagnostic",
+    "DiagDesc": "Vous avez des problèmes avec Forecast ? Entrez dans ce menu et découvrez ce qui se passe. (L'application sera redémarrée)",
+    "Reset": "Réinitialiser tous les paramètres",
+    "ResetDesc": "Réinitialiser tous les paramètres. Cette action NE PEUT PAS être annulée.",
+
+    "Misc": "Autres",
+    "Wii": "Mode Wii",
+    "WiiDesc": "Exécuter ISN Forecast dans un environnement Wii simulé."
+  },
+  "About":{
+    "About": "À propos de Forecast",
+    "Version": "Version",
+    "Build number": "Numéro de construction",
+    "Software Update": "Mise à jour du logiciel",
+    "NoUpdate": "Vous êtes à jour.",
+    "UpdateFound": "La mise à jour du logiciel a été trouvée",
+
+    "Lang": "Language",
+    "Langcode": "Code de la langue",
+    "Langver": "Version linguistique"
+  },
+  "Search":{
+    "Search": "Rechercher",
+    "InsuffChar": "Nombre insuffisant de caractères",
+    "Type1More": "Tapez 1 caractère supplémentaire pour commencer votre recherche.",
+    "Type2More": "Tapez 2 caractères supplémentaires pour commencer votre recherche.",
+
+    "NothingHere": "Rien encore ici...",
+    "NothingInstruct": "Tapez quelque chose dans le champ de recherche pour lancer la recherche.",
+
+    "xResultsFound (Post)": " résultats trouvés",
+    "xResultsFound (Pre)": ""
+  }
+}

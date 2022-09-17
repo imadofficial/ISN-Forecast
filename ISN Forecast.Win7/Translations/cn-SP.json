@@ -1,0 +1,241 @@
+{
+  "Metadata": {
+    "LangCode": "cn",
+    "LangName": "中文",
+    "LangBuild": "15",
+    "FontNormal": "/Assets/Fonts/Chinese/Simplified/Regular.otf#Noto Sans SC",
+    "FontBold": "/Assets/Fonts/Chinese/Simplified/Bold.otf#Noto Sans SC"
+  },
+
+  "PlsWait": "请等待...",
+  "FinishedRestart": "感谢你使用ISN Forecast。",
+  "Finished": "现在应用程序将重新启动。",
+
+  "Units":{
+    "celsius": "摄氏度 (°C)",
+    "farenheit": "华氏度 (°F)",
+
+    "kmh": "公里/小时 (km/h)",
+    "mph": "英里/小时 (mph)",
+
+    "mm": "毫米 (mm)",
+    "inch": "英寸 (in)"
+  },
+  "Setup": {
+    "Welcome": "欢迎你!",
+
+    "Step1": "语言",
+    "Step2": "准备好",
+    "Step3": "外观",
+    "Step4": "定位服务",
+    "Step5": "其他设置",
+
+    "Language Select": "选择你喜欢的语言。",
+    "ChangeLanguageLater": "如果有必要，以后可以改变语言设置。",
+    "Recommended": "推荐的语言",
+    "OtherLang": "其他语言可供选择。",
+
+    "UpdateTitle": "检查更新...",
+    "TimeToUpdate": "检查...",
+    "ExtraUpdateInfo": "更新的频率可以在设置中自由改变。",
+
+    "AppearanceTitle": "是时候选择你最喜欢的造型了!",
+    "AppearanceExtra": "你可以在这里修改你的外观。但有几个选项是不可用的。",
+    "ChooseLook": "选择你的外观。",
+    "ChooseLookWording": "选择一个外观，看看按钮、上下文菜单和背景是如何调整的，这取决于你选择哪一个。",
+    "GradientOnly": "丰富多彩",
+    "Black": "暗色系",
+    "White": "明亮的色彩",
+    "Gradient+3D": "天气动画",
+
+    "Saving": "拯救...",
+    "IntialSaving": "全部完成! 现在我们要保存你的设置!",
+    "WritingToFile": "写入一个保存文件...",
+
+    "Finished": "Welcome to ISN Forecast!",
+    "ThankYou": "",
+
+    "LastStepTitle": "最后一步",
+    "LastStepDesc": "为了充分利用 Forecast，我们要求你确认这些信息是否正确。如果不正确，请纠正它们。",
+    "TimeFormat": "时间格式",
+    "12Hour": "12小时",
+    "24Hour": "24小时",
+    "DateFormat": "日期格式",
+    "Country": "居住国",
+    "UseEmergencyServices": "选择使用紧急服务。",
+    "AllowBackgroundUpdate": "允许预报器在后台自动更新",
+    "NotRecommended": "(不推荐)",
+    "tempunit": "温度单位",
+
+    "Region": "地区",
+    "Application": "应用",
+    "Optional": "可选",
+
+    "LocationCheck": "地点检查",
+    "LocationDescription": "你可以使用下面这些信息来排除GPS的任何问题。",
+    "Fail": "失败",
+    "Pass": "通过",
+    "GPSFailDesc": "Forecast没有能够得到GPS的位置。这可能是由于各种原因造成的。",
+    "City": "城市",
+    "Latitude": "纬度",
+    "Longitude": "经度",
+    
+    "ContinueGPS": "继续使用GPS",
+    "ContinueIP": "继续使用IP",
+
+    "AreYouSure": "你确定吗？",
+    "AreYouSureDesc": "由于各种原因，我们不建议在一般情况下使用基于IP的定位。",
+    "IncorrectLocation": "不正确的位置可能会显示出来。",
+    "IPmgmnt": "IP管理服务有时可能无法使用。",
+
+    "ContinueAnyway": "无论如何继续（不建议）",
+    "SetLocationManually": "手动设置位置",
+    "Back": "溯源"
+  },
+  "Weather": {
+    "Prep": "准备...",
+    "CurrentWeather": "当前天气",
+    "LastUpdated": "最后更新  ",
+    "Astronomy": "天文学",
+    "Sunrise": "日出",
+    "Sunset": "日落",
+    "24HrForecast": "24小时预测",
+    "UV-Index": "紫外线指数",
+    "5DayForecast": "5天的预测",
+    "AQI": "空气质量指数",
+    "Past24": "在过去24小时内",
+    "WindSpeed": "风速",
+    "WindDirection": "风向",
+    "Wind": "风",
+    "Rainfall": "降雨量",
+    "lang":"zh_cmn"
+  },
+  "Countries": {
+    "BE": "比利时", "比利时": "BE", 
+    "UK": "英国", "英国": "UK",
+    "NL": "荷兰", "荷兰": "NL",
+    "FR": "法国", "法国": "FR",
+    "ES": "西班牙", "西班牙": "ES"
+  },
+  "UVIndex": {
+    "1T": "低",
+    "2T": "低",
+    "3T": "低",
+    "4T": "中等水平",
+    "5T": "中等水平",
+    "6T": "中等水平",
+    "7T": "高",
+    "8T": "高",
+    "9T": "高",
+    "10T": "高",
+    "11T": "非常高",
+    
+    "1": "不需要采取特别措施。",
+    "2": "不需要采取特别措施。",
+    "3": "需要保护，建议涂抹防晒霜。",
+    "4": "需要保护，建议涂抹防晒霜。",
+    "5": "需要保护，建议涂抹防晒霜。",
+    "6": "需要保护，强烈建议涂抹防晒霜。",
+    "7": "需要保护，强烈建议涂抹防晒霜。",
+    "8": "需要额外的保护，建议在中午时分涂抹防晒霜并寻求阴凉处。",
+    "9": "需要额外的保护，建议在中午时分涂抹防晒霜并寻求阴凉处。",
+    "10": "需要额外的保护，建议在中午时分涂抹防晒霜并寻求阴凉处。",
+    "11": "避免接触。燃烧时间为10-15分钟。"
+  },
+  "AQI": {
+    "1T": "低",
+    "2T": "低",
+    "3T": "低",
+    "4T": "中等水平",
+    "5T": "中等水平",
+    "6T": "中等水平",
+    "7T": "高",
+    "8T": "高",
+    "9T": "高",
+    "10T": "高",
+    "11T": "非常高",
+
+    "1": "这几乎不构成任何风险。",
+    "2": "这几乎不构成任何风险。",
+    "3": "这几乎不构成任何风险。",
+    "4": "有肺部和或心脏问题的成人和儿童可能会遇到问题。",
+    "5": "有肺部和或心脏问题的成人和儿童可能会遇到问题。",
+    "6": "有肺部和或心脏问题的成人和儿童可能会遇到问题。",
+    "7": "那些患有眼痛、咳嗽或喉咙痛的人应该考虑减少运动。",
+    "8": "那些患有眼痛、咳嗽或喉咙痛的人应该考虑减少运动。",
+    "9": "那些患有眼痛、咳嗽或喉咙痛的人应该考虑减少运动。",
+    "10": "限制体育活动，特别是户外活动，尤其是在你有咳嗽和/或喉咙痛的时候。"
+  },
+  "Condition": {
+    "1": "Clear",
+    "2": "Partly Cloudy",
+    "3": "Cloudy",
+    "4": "Tornado",
+    "5": "Light Rain",
+    "6": "Mostly Clear",
+    "7": "Rain"
+  },
+  "Settings": {
+    "Settings": "设置",
+
+    "Behavior": "行为习惯",
+    "AutoUpdates": "允许自动更新",
+    "AutoUpdatesDesc": "每当有新版本出现时，让你的电脑更新预测。",
+    "Unit": "单位",
+    "UnitDesc": "确定你想如何显示你的预测。",
+    "GPS": "全球定位系统(GPS)",
+    "GPSDesc": "如果启用，这可以提供更准确的位置信息。",
+
+    "General": "一般",
+    "Region": "地区",
+    "RegionDesc": "你所设定的国家使你对预测的体验更加个性化。",
+    "TimeFormat": "时间格式",
+    "TimeFormatDesc": "选择你想在状态栏中显示的时间格式。",
+    "Speed": "速度单位",
+    "SpeedDesc": "这将相应地修改你的风速设置。",
+
+    "Appearance": "外观",
+    "Color": "主题",
+    "ColorDesc": "选择你的颜色方案，它将被应用到各个地方。",
+
+    "AdditionalServices": "额外服务",
+    "EmergencyAlerts": "紧急警报",
+    "EmergencyAlertsDesc": "每当你的当地政府发布天气警告时，你就会得到通知。(这不支持地震警报)",
+    "EEW": "地震早期预警",
+    "EEWDesc": "ISN建议在任何时候都要启用这个功能。",
+
+    "DiagCategory": "诊断学",
+    "Diag": "进入诊断模式",
+    "DiagDesc": "在预测方面遇到问题？进入这个菜单，看看发生了什么事。(应用程序将被重新启动)",
+    "Reset": "重置所有设置",
+    "ResetDesc": "重置所有设置。这个动作不能被撤销。",
+
+    "Misc": "锦上添花",
+    "Wii": "Wii模式",
+    "WiiDesc": "在模拟的Wii环境中运行ISN预测。"
+  },
+  "About":{
+    "About": "About",
+    "Version": "Version",
+    "Build number": "Build number",
+    "Software Update": "Software Update",
+    "NoUpdate": "No updates were found",
+    "UpdateFound": "Software update was found",
+
+    "Lang": "Language",
+    "Langcode": "Language code",
+    "Langver": "Language version"
+  },
+  "Search":{
+    "Search": "搜索",
+    "InsuffChar": "字数不足",
+    "Type1More": "再输入1个字符，开始搜索。",
+    "Type2More": "再输入2个字符，开始搜索。",
+
+    "NothingHere": "这里还没有什么...",
+    "NothingInstruct": "在搜索框中输入一些内容，开始搜索。",
+
+    "xResultsFound (Post)": "发现",
+    "xResultsFound (Pre)": "个雷克特"
+  }
+}

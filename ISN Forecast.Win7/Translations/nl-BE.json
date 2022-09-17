@@ -1,0 +1,237 @@
+{
+  "Metadata": {
+    "LangCode": "nl_BE",
+    "LangName": "Nederlands (Belgi�)",
+    "LangBuild": "20",
+    "FontNormal": "/Assets/Fonts/Latin-Based/SFPRODISPLAYREGULAR.OTF#SF Pro Display",
+    "FontBold": "/Assets/Fonts/Latin-Based/SFPRODISPLAYBOLD.OTF#SF Pro Display"
+  },
+
+  "PlsWait": "Even geduld...",
+  "FinishedRestart": "Dank u om ISN Forecast te gebruiken.",
+  "Finished": "De app zal nu herstarten.",
+  
+  "Units":{
+    "celsius": "Celsius",
+    "farenheit": "Fahrenheit",
+
+    "kmh": "km/h",
+    "mph": "mph",
+
+    "mm": "Millimeter (mm)",
+    "inch": "Inch (in)"
+  },
+  "Setup": {
+    "Welcome": "Welkom!",
+
+    "Step1": "Taal",
+    "Step2": "Alles klaarmaken",
+    "Step3": "Uiterlijk",
+    "Step4": "Locatiediensten",
+    "Step5": "Andere instellingen",
+
+    "Language Select": "Selecteer je taal.",
+    "ChangeLanguageLater": "Je kan je taal instellingen later aanpassen in instellingen.",
+    "Recommended": "Aanbevolen taal",
+    "OtherLang": "Andere beschikbare talen",
+
+    "UpdateTitle": "Controleren op updates...",
+    "TimeToUpdate": "Checken...",
+    "ExtraUpdateInfo": "Voel je vrij om de frequentie van de updates aan te passen in de instellingen indien nodig.",
+
+    "AppearanceTitle": "Tijd om ISN Forecast te personalizeren!",
+    "AppearanceExtra": "Je kunt je uiterlijk hier aanpassen. Maar er zijn een paar opties niet beschikbaar.",
+    "ChooseLook": "Kies jouw uiterlijk.",
+    "ChooseLookWording": "Kies een uiterlijk en zie hoe de knoppen, contextmenu's en achtergrond zich aanpassen afhankelijk van welk uiterlijk u kiest.",
+    "GradientOnly": "Kleurrijk",
+    "Black": "Donker",
+    "White": "Licht",
+    "Gradient+3D": "Weer Animaties",
+
+    "Saving": "Opslaan...",
+    "IntialSaving": "Ziezo! Tijd om jouw instelling op te slaan!",
+    "WritingToFile": "Naar bestand schrijven...",
+
+    "Finished": "Welkom bij ISN Forecast!",
+    "ThankYou": "",
+
+    "LastStepTitle": "Het laatste stap",
+    "LastStepDesc": "Om ISN Forecast tot zijn volledige potentie te kunnen gebruiken, willen we je vragen om deze informatie te controleren. Indien er iets fout is, corrigeer het.",
+    "TimeFormat": "Tijd formaat",
+    "12Hour": "12 uursklok",
+    "24Hour": "24 uursklok",
+    "DateFormat": "Datum formaat",
+    "Country": "Land",
+    "UseEmergencyServices": "Gebruik maken van ISN's nooddiensten",
+    "AllowBackgroundUpdate": "Bijwerken op de achtergrond toestaan",
+    "NotRecommended": "(Niet aangeraden)",
+    "tempunit": "Temperatuureenheid",
+
+    "Region": "Regio",
+    "Application": "Applicatie",
+    "Optional": "Optioneel",
+
+    "LocationCheck": "Locatiecontrole",
+    "LocationDescription": "Je kunt deze informatie hieronder gebruiken om eventuele problemen met de GPS-sensor op te lossen.",
+    "Fail": "Mislukt",
+    "Pass": "Geslaagd",
+    "GPSFailDesc": "Forecast was niet in staat om de GPS locatie te krijgen. Deze kan verschillende oorzaken hebben.",
+    "City": "Stad",
+    "Latitude": "Breedtegraad",
+    "Longitude": "Lengtegraad",
+    
+    "ContinueGPS": "Verdergaan met GPS",
+    "ContinueIP": "Verdergaan met IP",
+
+    "AreYouSure": "Ben je zeker?",
+    "AreYouSureDesc": "Wij raden IP-Locaties niet aan voor algemeen gebruik wegens verschillende redenen.",
+    "IncorrectLocation": "Het verkeerde locatie kan worden weergegeven.",
+    "IPmgmnt": "Het IP Management Service kan soms niet beschikbaar zijn.",
+
+    "ContinueAnyway": "Ga toch verder (Niet aangeraden)",
+    "SetLocationManually": "Locatie handmatig instellen",
+    "Back": "Terug"
+  },
+  "Countries": {
+    "BE": "België",
+    "België": "BE",
+    "UK": "Verenigd Koninkrijk",
+    "Verenigd Koninkrijk": "UK",
+    "NL": "Nederland",
+    "Nederland": "NL",
+    "FR": "Frankrijk",
+    "Frankrijk": "FR",
+    "ES": "Spanje",
+    "Spanje": "ES"
+  },
+  "Weather": {
+    "Prep": "Voorbereiden",
+    "CurrentWeather": "Huidige weer",
+    "LastUpdated": "bijgewerkt op ",
+    "Astronomy": "Zonsopgangen",
+    "Sunrise": "Zonsopgang",
+    "Sunset": "Zonsondergang",
+    "24HrForecast": "24-uurs voorspelling",
+    "UV-Index": "UV (Straling) Index",
+    "5DayForecast": "5-Daags voorspelling",
+    "AQI": "Luchtkwaliteitsindex",
+    "Past24": "in de laatste 24 uur",
+    "WindSpeed": "Wind snelheid",
+    "WindDirection": "Windrichting",
+    "Wind": "Wind",
+    "Rainfall": "Neerslag",
+    "lang":"nl"
+  },
+  "AQI":{
+    "1T": "Laag",
+    "2T": "Laag",
+    "3T": "Laag",
+    "4T": "Matig",
+    "5T": "Matig",
+    "6T": "Matig",
+    "7T": "Hoog",
+    "8T": "Hoog",
+    "9T": "Hoog",
+    "10T": "Hoog",
+    "11T": "Heel Hoog",
+
+    "1": "Geniet van uw gebruikelijke buitenactiviteiten.",
+    "2": "Geniet van uw gebruikelijke buitenactiviteiten.",
+    "3": "Geniet van uw gebruikelijke buitenactiviteiten.",
+    "4": "Volwassenen en kinderen met long- en of hartproblemen, kunnen problemen ondervinden.",
+    "5": "Volwassenen en kinderen met long- en of hartproblemen, kunnen problemen ondervinden.",
+    "6": "Volwassenen en kinderen met long- en of hartproblemen, kunnen problemen ondervinden.",
+    "7": "Wie last heeft van pijnlijke ogen, hoest of keelpijn, moet overwegen minder te gaan sporten.",
+    "8": "Wie last heeft van pijnlijke ogen, hoest of keelpijn, moet overwegen minder te gaan sporten.",
+    "9": "Wie last heeft van pijnlijke ogen, hoest of keelpijn, moet overwegen minder te gaan sporten.",
+    "10": "Beperk lichamelijke inspanning, vooral buitenshuis, vooral als u last heeft van hoest en/of keelpijn."
+  },
+  "UVIndex": {
+    "1T": "Laag",
+    "2T": "Laag",
+    "3T": "Laag",
+    "4T": "Matig",
+    "5T": "Matig",
+    "6T": "Matig",
+    "7T": "Hoog",
+    "8T": "Hoog",
+    "9T": "Hoog",
+    "10T": "Hoog",
+    "11T": "Heel Hoog",
+
+    "1": "Er hoeven geen speciale maatregelen genomen worden.",
+    "2": "Er hoeven geen speciale maatregelen genomen worden.",
+    "3": "Bescherming vereist, het is aangeraden om zonnecrème te dragen.",
+    "4": "Bescherming vereist, het is aangeraden om zonnecrème te dragen.",
+    "5": "Bescherming vereist, het is aangeraden om zonnecrème te dragen.",
+    "6": "Bescherming nodig, het is ernstig aanbevolen om zonnebrandcrème te dragen.",
+    "7": "Bescherming nodig, het is ernstig aanbevolen om zonnebrandcrème te dragen.",
+    "8": "Extra bescherming is vereist, het is aanbevolen om zonnebrandcrème te dragen en schaduw te zoeken tijdens de middaguren.",
+    "9": "Extra bescherming is vereist, het is aanbevolen om zonnebrandcrème te dragen en schaduw te zoeken tijdens de middaguren.",
+    "10": "Extra bescherming is vereist, het is aanbevolen om zonnebrandcrème te dragen en schaduw te zoeken tijdens de middaguren.",
+    "11": "Vermijd blootstelling. Brandduur is 10-15 minuten."
+  },
+  "Settings": {
+    "Settings": "Instellingen",
+
+    "Behavior": "App gedrag",
+    "AutoUpdates": "Sta automatische updates toe",
+    "AutoUpdatesDesc": "Laat uw PC Forecast updaten wanneer er een nieuwe versie uitkomt.",
+    "Unit": "Temperatuur eenheid",
+    "UnitDesc": "Bepaal hoe u uw voorspelling wilt weergeven.",
+    "GPS": "GPS",
+    "GPSDesc": "Indien ingeschakeld, kan dit nauwkeurigere locatie-informatie opleveren.",
+
+    "General": "Algemeen",
+    "Region": "Regio",
+    "RegionDesc": "Het land dat u instelt verpersoonlijkt uw ervaring met Forecast.",
+    "TimeFormat": "Tijdformaat",
+    "TimeFormatDesc": "Selecteer de tijdsformaat die u in uw statusbalk wilt zien.",
+    "Speed": "Snelheidseenheid",
+    "SpeedDesc": "Dit zal uw windsnelheidsinstellingen dienovereenkomstig wijzigen.",
+
+    "Appearance": "Uiterlijk",
+    "Color": "Kleur",
+    "ColorDesc": "Selecteer uw thema en het zal overal worden toegepast.",
+
+    "AdditionalServices": "Andere diensten",
+    "EmergencyAlerts": "Noodmeldingen",
+    "EmergencyAlertsDesc": "Ontvang een melding wanneer uw lokale overheid een weerswaarschuwing afgeeft. (Dit ondersteunt GEEN EEW-waarschuwingen)",
+    "EEW": "Vroege aardbevingswaarschuwing",
+    "EEWDesc": "ISN raadt aan om dit altijd ingeschakeld te houden.",
+
+    "DiagCategory": "Diagnostiek",
+    "Diag": "Ga naar de diagnostische modus",
+    "DiagDesc": "Heeft u problemen met Forecast? Ga naar dit menu en ontdek wat er aan de hand is. (De applicatie wordt opnieuw gestart)",
+    "Reset": "ALLE instellingen resetten",
+    "ResetDesc": "Reset alle instellingen. Deze actie KAN NIET ongedaan gemaakt worden.",
+
+    "Misc": "Andere instellingen",
+    "Wii": "Wii-modus",
+    "WiiDesc": "Voer ISN Forecast uit in een gesimuleerde Wii-omgeving."
+  },
+  "About":{
+    "About": "About",
+    "Version": "Version",
+    "Build number": "Build number",
+    "Software Update": "Software Update",
+    "NoUpdate": "No updates were found",
+    "UpdateFound": "Software update was found",
+
+    "Lang": "Language",
+    "Langcode": "Language code",
+    "Langver": "Language version"
+  },
+  "Search":{
+    "Search": "Zoeken",
+    "InsuffChar": "Onvoldoende karakters",
+    "Type1More": "Typ nog 1 teken om uw zoekopdracht te starten.",
+    "Type2More": "Typ nog 2 tekens om uw zoekopdracht te starten.",
+
+    "NothingHere": "Hier nog niets...",
+    "NothingInstruct": "Typ iets in het zoekvak om te beginnen met zoeken",
+
+    "xResultsFound (Post)": "resultaten gevonden",
+    "xResultsFound (Pre)": ""
+  }
+}

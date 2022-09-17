@@ -1,0 +1,17 @@
+[
+  {
+    "OOBESetup": "False",
+    "Language": "cn-SP",
+    "Appearance": 0, //0 = Gradient, 1 = Dark, 2 = Bright, 3 = Mica
+    "TimeFormat": "24",
+    "DateFormat": "DD/MM/YYYY",
+    "Country": "BE",
+    "AllowAlerts": "True",
+    "AllowAutoUpdate": "True",
+    "Unit": "temp_c",
+
+    "GPS": "True",
+    "Percipitation": "precip_mm",
+    "Speed":  "kmh"
+  }
+]
