@@ -4,8 +4,8 @@ The actively maintained application & reliable weather application.
 
 **Latest build:**
 
-| [7+ (64-Bit only)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) | [Windows 10 1903+ & 11 (x64)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) | Linux (x64) - Soon!
-| ------------- | ------------- | ------------- |
+| [Windows 10 1903+ & 11 (x64)](https://github.com/imadofficial/ISN-Forecast-Channel/releases/latest) | Linux (x64) - Soon!
+| ------------- | ------------- |
 
 ## What are the features?
 As of right now (9 June, 2022) ISN Forecast Channel is capable of a 24 hour forecast (having bugs), showing celsius and fahrenheit, UV-Index and displaying AQI (AQI is in works still.)
