@@ -1,9 +1,33 @@
 {
-  "Version": "1.0",
-  "Build": 46,
-  "SubBuild": 3,
+    "22000":{
+        "Version": "1.0",
+        "Build": 177,
+        "SubBuild": 0,
+        
+        "UpdateName": "Mica Update",
+        "Additional Req": "None",
+        "Description": "Major update to design of ISN Forecast to match with your OS & setup.",
+        "DownloadLink": ""
+    },
+    "22621":{
+        "Version": "1.0",
+        "Build": 177,
+        "SubBuild": 0,
+        
+        "UpdateName": "Mica Update",
+        "Additional Req": "None",
+        "Description": "Major update to design of ISN Forecast to match with your OS & setup.",
+        "DownloadLink": ""
+    },
+    "1904x":{
+        "Version": "1.0",
+        "Build": 177,
+        "SubBuild": 0,
+        
+        "UpdateName": "Acrylic Update",
+        "Additional Req": "None",
+        "Description": "Major update to design of ISN Forecast to match with your OS & setup.",
+        "DownloadLink": ""
+    }
+  }
   
-  "UpdateName": "Initial Release",
-  "Additional Req": "None",
-  "Description": "This is an initial release. This shouldn't appear as an update."
-}
